@@ -12,6 +12,11 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        sans: ["Poppins", "sans-serif"],
+        // mono: ["Roboto", "monospace"],
+        nunito: ["Nunito", "sans-serif"]
+      },
     },
   },
   plugins: [],
