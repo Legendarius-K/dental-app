@@ -35,7 +35,7 @@ const Navbar = () => {
     return (
         <nav className={`fixed top-0 left-0 z-40 w-full py-4 flex justify-center transition-all px-10 ${dropdownOpen ? "text-black" : ''}`}>
             <div onClick={closeDropdown} className={`OVERLAY absolute top-0 left-0 bg-black opacity-40 w-full h-screen ${!dropdownOpen ? "hidden" : ''}`}></div>
-           <h1 className={`z-40 text-2xl font-semibold absolute left-10 ${dropdownOpen ? "text-black" : ''}`}>Tand Trygg</h1>
+            <h1 className={`z-40 text-2xl font-semibold absolute left-10 ${dropdownOpen ? "text-black" : ''}`}>Tand Trygg</h1>
             <div className="flex gap-10">
                 <div onClick={handleClick} className={`flex items-center z-40 cursor-pointer transition-all ${dropdownOpen ? "text-black" : ''} relative hover:cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-200 before:absolute before:bg-teal-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[55%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-200 after:absolute after:bg-teal-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[55%] after:bottom-0 after:right-[50%]`}>
                     <p>Behandlingar</p>
@@ -43,7 +43,7 @@ const Navbar = () => {
                         {!dropdownOpen && <Image className="w-full h-auto" src={arrowWhite} alt="arrow" />}
                         {dropdownOpen && <Image className="w-full h-auto pb-1" src={arrowBlack} alt="arrow" />}
                     </div>
-                    </div>
+                </div>
                 <div className={`absolute z-60 left-0 flex w-full justify-center bg-neutral-100 text-black transition-transform duration-300 pt-[100px] pb-6 ${!dropdownOpen ? "-translate-y-[200%]" : "-translate-y-10"}`}>
                     <div className="flex flex-col">
 
