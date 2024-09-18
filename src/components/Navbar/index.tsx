@@ -35,8 +35,8 @@ const Navbar = () => {
     return (
         <nav className={`fixed top-0 left-0 z-40 w-full py-4 flex justify-center transition-all px-10 ${dropdownOpen ? "text-black" : ''}`}>
             <div onClick={closeDropdown} className={`OVERLAY absolute top-0 left-0 bg-black opacity-40 w-full h-screen ${!dropdownOpen ? "hidden" : ''}`}></div>
-            <h1 className={`z-40 text-2xl font-semibold absolute left-10 ${dropdownOpen ? "text-black" : ''}`}>Tand Trygg</h1>
-            <div className="flex gap-10">
+            <h1 className={`z-40 text-2xl font-semibold absolute left-5 lg:left-10 ${dropdownOpen ? "text-black" : ''}`}>Tand Trygg</h1>
+            <div className="flex gap-5 lg:gap-10">
                 <div onClick={handleClick} className={`flex items-center z-40 cursor-pointer transition-all ${dropdownOpen ? "text-black" : ''} relative hover:cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-200 before:absolute before:bg-teal-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[55%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-200 after:absolute after:bg-teal-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[55%] after:bottom-0 after:right-[50%]`}>
                     <p>Behandlingar</p>
                     <div className="w-[15px] ml-1 pt-1">
@@ -108,8 +108,8 @@ const Navbar = () => {
                 <Link className="z-40  relative hover:cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-200 before:absolute before:bg-teal-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[55%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-200 after:absolute after:bg-teal-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[55%] after:bottom-0 after:right-[50%]" href={'/prices'}>Priser</Link>
                 <Link className="z-40 relative hover:cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-200 before:absolute before:bg-teal-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[55%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-200 after:absolute after:bg-teal-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[55%] after:bottom-0 after:right-[50%]" href={'/about_us'}>Om oss</Link>
             </div>
-            <div className="absolute right-10">
-                <BookButton text="BOKA ONLINE" buttonStyle="text-sm py-2 w-[130px]" />
+            <div className="absolute right-5 lg:right-10">
+                <BookButton text="BOKA ONLINE" buttonStyle="text-sm py-[7px] w-[131px]" />
             </div>
         </nav>
     )

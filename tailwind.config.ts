@@ -14,7 +14,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["Poppins", "sans-serif"],
-        // mono: ["Roboto", "monospace"],
+        playfair: ["Playfair+Display", "serif"],
         nunito: ["Nunito", "sans-serif"]
       },
     },
