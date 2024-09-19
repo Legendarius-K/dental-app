@@ -4,7 +4,7 @@ import BookButton from "../BookButton";
 
 const TimeToVisit = () => {
     return (
-        <div className="bg-[#CF7D30] w-full h-[1100px] md:h-[508px] lg:h-[508px] xl:h-[500px] 2xl:h-[384px] relative">
+        <div className="bg-[#B9D9EB] w-full h-[1100px] md:h-[508px] lg:h-[508px] xl:h-[500px] 2xl:h-[384px] relative">
             <div className="flex flex-col lg:flex-row p-10">
                 <div className="basis-1/2 p-8 md:ml-[100px]">
                     <p className="text-5xl pb-6">Dags för en undersökning?</p>
@@ -25,7 +25,7 @@ const TimeToVisit = () => {
                     <img 
                         src={curly.src} 
                         alt="smiling lady" 
-                        className="absolute bg-[#CF7D30] z-20 lg:hidden w-full" 
+                        className="absolute bg-[#B9D9EB] z-20 lg:hidden w-full" 
                     />
                 </div>
             </div>
