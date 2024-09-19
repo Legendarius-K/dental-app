@@ -1,9 +1,10 @@
+import HeroPrices from "@/components/HeroPrices";
 
 
 const prices = () => {
     return (
         <>
-         Priser   
+         <HeroPrices />
         </>
     )
 };
