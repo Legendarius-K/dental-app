@@ -8,7 +8,7 @@ const Hero = () => {
             className="relative w-full h-[800px] bg-cover bg-center text-neutral-100 font-sans"
             style={{ backgroundImage: "url('/images/niceteeth.jpg')" }}
         >
-            <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
+            <div className="absolute inset-0 bg-black opacity-30 z-10"></div>
             <div className=" ml-[130px]">
                 <h1 className="relative z-20 text-7xl font-semibold max-w-[500px] pt-[190px]">Tranås <span className="relative before:content-[''] before:absolute before:w-full before:h-[2px] before:bg-teal-300 before:bottom-5 before:left-0 before:translate-y-1">bästa</span> tandvård</h1>
                 <h2 className="relative z-20 text-xl max-w-[500px] pt-6 font-light">Ny fräsch klinik mitt i Tranås. Boka idag så bjuder vi på de 100 första besöken!</h2>
