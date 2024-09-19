@@ -33,6 +33,10 @@ const Navbar = () => {
     }
 
     useEffect(() => {
+        !isOpen && setDropdownBurger(false)
+    }, [isOpen])
+
+    useEffect(() => {
         if (dropdownOpen || isOpen) {
             document.body.classList.add("overflow-y-hidden", "touch-none", "overscroll-none")
         } else {
@@ -41,7 +45,7 @@ const Navbar = () => {
     }, [dropdownOpen, isOpen]);
 
     return (
-        <nav className={`fixed top-0 left-0 z-40 w-full py-4 flex justify-center transition-all px-10 h-[56px] bg-black bg-opacity-45 ${dropdownOpen ? "text-black" : ''}`}>
+        <nav className={`fixed top-0 left-0 z-40 w-full py-4 flex justify-center transition-all px-10 h-[56px] bg-black bg-opacity-60 ${dropdownOpen ? "text-black" : ''}`}>
             <div onClick={closeMenu} className={`OVERLAY absolute top-0 left-0 bg-black opacity-40 w-full h-screen ${dropdownOpen || isOpen ? '' : 'hidden'}`}></div>
             <Link href={'/'}><h1 className={`z-20 text-xl md:text-2xl font-semibold absolute left-14 md:left-5 lg:left-10 top-[11px] ${dropdownOpen ? "text-black" : ''}`}>Tand Trygg</h1></Link>
             <div className="gap-5 lg:gap-10 hidden md:flex">
@@ -117,7 +121,7 @@ const Navbar = () => {
                 <Link className="z-40 relative hover:cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-200 before:absolute before:bg-teal-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[55%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-200 after:absolute after:bg-teal-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[55%] after:bottom-0 after:right-[50%]" href={'/about_us'}>Om oss</Link>
             </div>
             <div className={`absolute right-5 lg:right-10 top-[11px] ${isOpen && 'hidden'}`}>
-                <BookButton text="BOKA TID" buttonStyle="text-sm py-[7px] w-[90px]" />
+                <BookButton text="BOKA TID" buttonStyle="text-sm py-[7px] w-[90px] shadow-lg" />
             </div>
             <div className="absolute z-30 left-1 top-[2px] md:hidden">
                 <Hamburger color={isOpen ? 'black' : 'white'} size={25} toggled={isOpen} toggle={setOpen} />
@@ -182,7 +186,7 @@ const Navbar = () => {
                 <Link className="text-xl z-40  relative " href={'/prices'}>Priser</Link>
                 <Link className="text-xl z-40 relative " href={'/about_us'}>Om oss</Link>
                 <div className="w-full mt-10">
-                    <BookButton text="BOKA TID" buttonStyle="text-lg py-[10px] w-full" />
+                    <BookButton text="BOKA TID" buttonStyle="text-lg py-[10px] w-full  shadow-lg" />
                 </div>
                 {/* <div className="text-orange-600 text-sm absolute bottom-20 left-10">
                     <p>070-123 456 78</p>
