@@ -31,6 +31,7 @@ const Hero = () => {
                     <p>&#8226; Nöjda kunder</p>
                 </div>
             </div>
+            <Navbar />
         </section>
     );
 };
