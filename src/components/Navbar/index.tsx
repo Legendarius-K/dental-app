@@ -44,9 +44,15 @@ const Navbar = () => {
         }
     }, [dropdownOpen, isOpen]);
 
+    const navItems = [
+        { title: "Hitta oss", link: '/find_us' },
+        { title: "Priser", link: '/prices' },
+        { title: "Om oss", link: '/about_us' },
+    ]
+
     return (
         <nav className={`fixed top-0 left-0 z-40 w-full py-4 flex justify-center transition-all px-10 h-[56px] bg-black bg-opacity-60 ${dropdownOpen ? "text-black" : ''}`}>
-            <div onClick={closeMenu} className={`OVERLAY absolute top-0 left-0 bg-black opacity-40 w-full h-screen ${dropdownOpen || isOpen ? '' : 'hidden'}`}></div>
+            <div onClick={closeMenu} className={`OVERLAY fixed top-0 left-0 bg-black opacity-40 w-full h-screen ${dropdownOpen || isOpen ? '' : 'hidden'}`}></div>
             <Link href={'/'}><h1 className={`z-20 text-xl md:text-2xl font-semibold absolute left-14 md:left-5 lg:left-10 top-[11px] ${dropdownOpen ? "text-black" : ''}`}>Tand Trygg</h1></Link>
             <div className="gap-5 lg:gap-10 hidden md:flex">
                 <div onClick={toggleDropdown} className={`flex items-center z-40 cursor-pointer transition-all ${dropdownOpen ? "text-black" : ''} relative hover:cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-200 before:absolute before:bg-teal-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[55%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-200 after:absolute after:bg-teal-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[55%] after:bottom-0 after:right-[50%]`}>
@@ -116,9 +122,7 @@ const Navbar = () => {
 
                     </div>
                 </div>
-                <Link className="z-40 relative hover:cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-200 before:absolute before:bg-teal-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[55%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-200 after:absolute after:bg-teal-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[55%] after:bottom-0 after:right-[50%]" href={'/find_us'}>Hitta oss</Link>
-                <Link className="z-40  relative hover:cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-200 before:absolute before:bg-teal-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[55%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-200 after:absolute after:bg-teal-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[55%] after:bottom-0 after:right-[50%]" href={'/prices'}>Priser</Link>
-                <Link className="z-40 relative hover:cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-200 before:absolute before:bg-teal-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[55%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-200 after:absolute after:bg-teal-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[55%] after:bottom-0 after:right-[50%]" href={'/about_us'}>Om oss</Link>
+                {navItems.map((item, index) => <Link key={index} className="z-40 relative hover:cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-200 before:absolute before:bg-teal-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[55%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-200 after:absolute after:bg-teal-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[55%] after:bottom-0 after:right-[50%]" href={item.link}>{item.title}</Link>)}
             </div>
             <div className={`absolute right-5 lg:right-10 top-[11px] ${isOpen && 'hidden'}`}>
                 <BookButton text="BOKA TID" buttonStyle="text-sm py-[7px] w-[90px] shadow-lg" />
@@ -133,8 +137,8 @@ const Navbar = () => {
 
 
 
-            <div className={`z-20 absolute top-0 w-4/5 h-screen bg-neutral-100 transition-all text-neutral-800 px-10 py-3 flex flex-col gap-4 ${isOpen ? 'left-0' : '-left-full'}`}>
-            <Link href={'/'}><h1 className={`text-right w-full z-40 text-xl md:text-2xl font-semibold mb-20`}>Tand Trygg</h1></Link>
+            <div className={`z-20 fixed top-0 w-4/5 h-screen bg-neutral-100 transition-all text-neutral-800 px-10 py-3 flex flex-col gap-4 ${isOpen ? 'left-0' : '-left-full'}`}>
+                <Link href={'/'}><h1 className={`text-right w-full z-40 text-xl md:text-2xl font-semibold mb-20`}>Tand Trygg</h1></Link>
                 <div onClick={toggleDropdownBurger} className={` text-xl flex items-center z-40 cursor-pointer transition-all ${dropdownOpen ? "text-black" : ''} relative `}>
                     <p>Behandlingar</p>
                     <div className="w-[18px] ml-1 pt-1">

@@ -6,9 +6,7 @@ export default function Home() {
     return (
         <main className="h-full">
             <Hero/>
-            <main className="h-[500px] bg-white">
-
-            </main>
+            
             
             <HowHelp/>
             <TimeToVisit />
