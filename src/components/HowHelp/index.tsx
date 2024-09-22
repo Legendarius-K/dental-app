@@ -2,7 +2,7 @@ import { HoverEffect } from "./CardHoverFX";
 
 export function HowHelp() {
     return (
-        <div className="max-w-6xl mx-auto px-8 py-20 text-center">
+        <div className="max-w-6xl mx-auto px-2 md:px-10 py-20 flex flex-col items-center">
             <h2 className="text-3xl md:text-4xl font-nunito font-semibold my-6">Hur kan vi hjälpa dig?</h2>
             <HoverEffect items={projects} />
         </div>

@@ -21,7 +21,7 @@ export const HoverEffect = ({
     return (
         <div
             className={cn(
-                "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 xl:gap-5 md:gap-3 gap-1",
+                "grid grid-cols-2 md:grid-cols-3  py-10 px-0 xl:gap-10 md:gap-5 gap-1",
                 className
             )}
         >
@@ -29,14 +29,14 @@ export const HoverEffect = ({
                 <Link
                     href={item.link}
                     key={item.link}
-                    className="relative group block p-2 h-full w-full"
+                    className="relative flex justify-center items-center group  p-2 h-full w-full max-w-[260px] min-h-[190px]"
                     onMouseEnter={() => setHoveredIndex(idx)}
                     onMouseLeave={() => setHoveredIndex(null)}
                 >
                     <AnimatePresence>
                         {hoveredIndex === idx && (
                             <motion.span
-                                className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-teal-300/[0.8] block rounded-3xl"
+                                className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-teal-200/[0.5] block rounded-3xl"
                                 layoutId="hoverBackground"
                                 initial={{ opacity: 0 }}
                                 animate={{
@@ -72,7 +72,7 @@ export const Card = ({
     return (
         <div
             className={cn(
-                "rounded-2xl h-full flex justify-center w-full p-4 overflow-hidden bg-teal-100 border border-transparent dark:border-white/[0.2] shadow-lg relative z-20",
+                " rounded-2xl h-full flex justify-center w-full p-4 overflow-hidden bg-teal-100 border border-transparent dark:border-white/[0.2] shadow-lg relative z-20",
                 className
             )}
         >
@@ -109,7 +109,7 @@ export const CardTitle = ({
     children: React.ReactNode;
 }) => {
     return (
-        <h4 className={cn("text-neutral-800 font-bold tracking-wide mt-4", className)}>
+        <h4 className={cn("text-neutral-800 font-semibold text-sm md:text-lg tracking-wide mt-8 text-center", className)}>
             {children}
         </h4>
     );

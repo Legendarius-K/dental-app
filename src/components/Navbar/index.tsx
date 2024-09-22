@@ -50,10 +50,18 @@ const Navbar = () => {
         { title: "Om oss", link: '/about_us' },
     ]
 
+    const dropdownItems = [
+        { image: emergency, title: "Akut tandvård", subTitle: "Vid tandvärk och olyckor", link: '/emergency' },
+        { image: implants, title: "Tandimplantat", subTitle: "Ersättning av förlorade tänder", link: '/implants' },
+        { image: aesthetic, title: "Estetisk tandvård", subTitle: "Korrigera tändernas utseende", link: '/aesthetics' },
+        { image: orto, title: "Tandreglering", subTitle: "För sneda eller trångställda tänder", link: '/orthodontics' },
+        { image: teeth, title: "Alla behandlingar", subTitle: "Se alla våra behandlingar", link: '/treatments' },
+    ]
+
     return (
-        <nav className={`fixed top-0 left-0 z-40 w-full py-4 flex justify-center transition-all px-10 h-[56px] bg-black bg-opacity-60 ${dropdownOpen ? "text-black" : ''}`}>
+        <nav className={`fixed top-0 left-0 z-40 w-full py-4 flex justify-between items-center transition-all px-4 h-[56px] bg-black bg-opacity-60 ${dropdownOpen ? "text-black" : ''}`}>
             <div onClick={closeMenu} className={`OVERLAY fixed top-0 left-0 bg-black opacity-40 w-full h-screen ${dropdownOpen || isOpen ? '' : 'hidden'}`}></div>
-            <Link href={'/'}><h1 className={`z-20 text-xl md:text-2xl font-semibold absolute left-14 md:left-5 lg:left-10 top-[11px] ${dropdownOpen ? "text-black" : ''}`}>Tand Trygg</h1></Link>
+            <Link href={'/'}><h1 className={`relative pl-10 md:pl-0 z-20 text-lg md:text-xl font-semibold  ${dropdownOpen ? "text-black" : ''}`}>Tand Trygg</h1></Link>
             <div className="gap-5 lg:gap-10 hidden md:flex">
                 <div onClick={toggleDropdown} className={`flex items-center z-40 cursor-pointer transition-all ${dropdownOpen ? "text-black" : ''} relative hover:cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-200 before:absolute before:bg-teal-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[55%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-200 after:absolute after:bg-teal-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[55%] after:bottom-0 after:right-[50%]`}>
                     <p>Behandlingar</p>
@@ -63,79 +71,31 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className={`absolute z-60 left-0 flex w-full justify-center bg-neutral-100 text-black transition-transform duration-300 pt-[100px] pb-6 ${!dropdownOpen ? "-translate-y-[200%]" : "-translate-y-10"}`}>
-                    <div className="flex flex-col">
-
-                        <Link className="px-20 flex hover:bg-teal-100 rounded-xl py-2 transition-all" href={'/emergency'}>
-                            <div className="w-[43px] mr-2">
-                                <Image className="w-full h-auto" src={emergency} alt="emergency" />
-                            </div>
-                            <div>
-                                <h3>Akut tandvård</h3>
-                                <p className="text-sm text-gray-500">Vid tandvärk och olyckor</p>
-                            </div>
-
-                        </Link>
-
-                        <Link className="px-20 flex hover:bg-teal-100 rounded-xl py-2" href={'/emergency'}>
-                            <div className="w-[43px] mr-2">
-                                <Image className="w-full h-auto" src={aesthetic} alt="aesthetic" />
-                            </div>
-                            <div>
-                                <h3>Estetisk tandvård</h3>
-                                <p className="text-sm text-gray-500">Korrigera tändernas utseende</p>
-                            </div>
-                        </Link>
-
-                        <Link className="px-20 flex hover:bg-teal-100 rounded-xl py-2" href={'/emergency'}>
-                            <div className="w-[43px] mr-2">
-                                <Image className="w-full h-auto" src={teeth} alt="teeth" />
-                            </div>
-                            <div>
-                                <h3>Alla behandlingar</h3>
-                                <p className="text-sm text-gray-500">Se alla våra behandlingar</p>
-                            </div>
-                        </Link>
-
-                    </div>
-                    <div className="flex flex-col">
-
-                        <Link className="px-20 flex hover:bg-teal-100 rounded-xl py-2" href={'/emergency'}>
-                            <div className="w-[43px] mr-2">
-                                <Image className="w-full h-auto" src={implants} alt="implants" />
-                            </div>
-                            <div>
-                                <h3>Tandimplantat</h3>
-                                <p className="text-sm text-gray-500">Ersättning av förlorade tänder</p>
-                            </div>
-                        </Link>
-
-
-                        <Link className="px-20 flex hover:bg-teal-100 rounded-xl py-2" href={'/emergency'}>
-                            <div className="w-[43px] mr-2">
-                                <Image className="w-full h-auto" src={orto} alt="orto" />
-                            </div>
-                            <div>
-                                <h3>Tandreglering</h3>
-                                <p className="text-sm text-gray-500">För sneda eller trångställda tänder</p>
-                            </div>
-                        </Link>
-
+                    <div className="grid grid-cols-2">
+                        {dropdownItems.map((item, index) =>
+                            <Link key={index} className="px-20 flex hover:bg-teal-100 rounded-xl py-2" href={item.link}>
+                                <div className="w-[43px] mr-2">
+                                    <Image className="w-full h-auto" src={item.image} alt={item.title} />
+                                </div>
+                                <div>
+                                    <h3>{item.title}</h3>
+                                    <p className="text-sm text-gray-500">{item.subTitle}</p>
+                                </div>
+                            </Link>)
+                        }
                     </div>
                 </div>
                 {navItems.map((item, index) => <Link key={index} className="z-40 relative hover:cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-200 before:absolute before:bg-teal-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[55%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-200 after:absolute after:bg-teal-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[55%] after:bottom-0 after:right-[50%]" href={item.link}>{item.title}</Link>)}
             </div>
-            <div className={`absolute right-5 lg:right-10 top-[11px] ${isOpen && 'hidden'}`}>
+            <div className={` ${isOpen && 'hidden'}`}>
                 <BookButton text="BOKA TID" buttonStyle="text-sm py-[7px] w-[90px] shadow-lg" />
             </div>
-            <div className="absolute z-30 left-1 top-[2px] md:hidden">
+            <div className="absolute z-30 left-1 top-[4px] md:hidden">
                 <Hamburger color={isOpen ? 'black' : 'white'} size={25} toggled={isOpen} toggle={setOpen} />
             </div>
 
 
-
-
-
-
+                        {/* Hamburger menu below */}
 
             <div className={`z-20 fixed top-0 w-4/5 h-screen bg-neutral-100 transition-all text-neutral-800 px-10 py-3 flex flex-col gap-4 ${isOpen ? 'left-0' : '-left-full'}`}>
                 <Link href={'/'}><h1 className={`text-right w-full z-40 text-xl md:text-2xl font-semibold mb-20`}>Tand Trygg</h1></Link>
@@ -146,49 +106,17 @@ const Navbar = () => {
 
                     </div>
                 </div>
-                <div className={`text-neutral-500 z-60 flex flex-col gap-2 w-full justify-center bg-neutral-100 transition-all duration-300 py-3 pl-3 overflow-hidden ${!dropDownBurger ? "hidden" : ""}`}>
-
-
-                    <Link className="flex" href={'/emergency'}>
-                        <div className="w-[25px] mr-2">
-                            <Image className="w-full h-auto" src={emergency} alt="emergency" />
-                        </div>
-                        <h3>Akut tandvård</h3>
-                    </Link>
-
-                    <Link className="flex" href={'/emergency'}>
-                        <div className="w-[25px] mr-2">
-                            <Image className="w-full h-auto" src={aesthetic} alt="aesthetic" />
-                        </div>
-                        <h3>Estetisk tandvård</h3>
-                    </Link>
-
-                    <Link className="flex" href={'/emergency'}>
-                        <div className="w-[25px] mr-2">
-                            <Image className="w-full h-auto" src={teeth} alt="teeth" />
-                        </div>
-                        <h3>Alla behandlingar</h3>
-                    </Link>
-
-                    <Link className="flex" href={'/emergency'}>
-                        <div className="w-[25px] mr-2">
-                            <Image className="w-full h-auto" src={implants} alt="implants" />
-                        </div>
-                        <h3>Tandimplantat</h3>
-                    </Link>
-
-                    <Link className="flex" href={'/emergency'}>
-                        <div className="w-[25px] mr-2">
-                            <Image className="w-full h-auto" src={orto} alt="orto" />
-                        </div>
-                        <h3>Tandreglering</h3>
-                    </Link>
-
+                <div className={`text-neutral-500 z-60 flex flex-col gap-3 w-full justify-center bg-neutral-100 transition-all duration-300 py-3 pl-3 overflow-hidden ${!dropDownBurger ? "hidden" : ""}`}>
+                    {dropdownItems.map((item, index) =>
+                        <Link key={index} className="flex" href={item.link}>
+                            <div className="w-[25px] mr-2">
+                                <Image className="w-full h-auto" src={item.image} alt={item.title} />
+                            </div>
+                            <h3 className="text-lg">{item.title}</h3>
+                        </Link>)
+                    }
                 </div>
-
-                <Link className="text-xl z-40 relative " href={'/find_us'}>Hitta oss</Link>
-                <Link className="text-xl z-40  relative " href={'/prices'}>Priser</Link>
-                <Link className="text-xl z-40 relative " href={'/about_us'}>Om oss</Link>
+                {navItems.map((item, index) => <Link className="text-xl z-40 relative " href={item.link}>{item.title}</Link>)}
                 <div className="w-full mt-10">
                     <BookButton text="BOKA TID" buttonStyle="text-lg py-[10px] w-full  shadow-lg" />
                 </div>
@@ -202,3 +130,60 @@ const Navbar = () => {
 };
 
 export default Navbar
+
+
+
+// < Link className = "px-20 flex hover:bg-teal-100 rounded-xl py-2 transition-all" href = { '/emergency'} >
+//                         <div className="w-[43px] mr-2">
+//                             <Image className="w-full h-auto" src={emergency} alt="emergency" />
+//                         </div>
+//                         <div>
+//                             <h3>Akut tandvård</h3>
+//                             <p className="text-sm text-gray-500">Vid tandvärk och olyckor</p>
+//                         </div>
+
+//                     </ >
+
+//                     <Link className="px-20 flex hover:bg-teal-100 rounded-xl py-2" href={'/emergency'}>
+//                         <div className="w-[43px] mr-2">
+//                             <Image className="w-full h-auto" src={aesthetic} alt="aesthetic" />
+//                         </div>
+//                         <div>
+//                             <h3>Estetisk tandvård</h3>
+//                             <p className="text-sm text-gray-500">Korrigera tändernas utseende</p>
+//                         </div>
+//                     </Link>
+
+//                     <Link className="px-20 flex hover:bg-teal-100 rounded-xl py-2" href={'/emergency'}>
+//                         <div className="w-[43px] mr-2">
+//                             <Image className="w-full h-auto" src={teeth} alt="teeth" />
+//                         </div>
+//                         <div>
+//                             <h3>Alla behandlingar</h3>
+//                             <p className="text-sm text-gray-500">Se alla våra behandlingar</p>
+//                         </div>
+//                     </Link>
+
+//                 </div >
+// <div className="flex flex-col">
+
+//     <Link className="px-20 flex hover:bg-teal-100 rounded-xl py-2" href={'/emergency'}>
+//         <div className="w-[43px] mr-2">
+//             <Image className="w-full h-auto" src={implants} alt="implants" />
+//         </div>
+//         <div>
+//             <h3>Tandimplantat</h3>
+//             <p className="text-sm text-gray-500">Ersättning av förlorade tänder</p>
+//         </div>
+//     </Link>
+
+
+//     <Link className="px-20 flex hover:bg-teal-100 rounded-xl py-2" href={'/emergency'}>
+//         <div className="w-[43px] mr-2">
+//             <Image className="w-full h-auto" src={orto} alt="orto" />
+//         </div>
+//         <div>
+//             <h3>Tandreglering</h3>
+//             <p className="text-sm text-gray-500">För sneda eller trångställda tänder</p>
+//         </div>
+//     </Link>
