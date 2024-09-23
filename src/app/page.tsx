@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import { HowHelp } from "@/components/HowHelp";
+import SafeCare from "@/components/SafeCare";
 import TimeToVisit from "@/components/TimeToVisit";
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
             
             
             <HowHelp/>
+            <SafeCare/>
             {/* <TimeToVisit /> */}
         </main>
   );

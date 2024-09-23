@@ -7,7 +7,7 @@ import React from "react";
 const Footer = () => {
   
   return (
-    <footer className={`w-full py-16 mx-auto px-8 text-textwhite bg-bluegray border-t-2 text-ne border-white font-sans`}>
+    <footer className={`w-full py-16 mx-auto px-8 text-textwhite bg-bluegray border-t-2 font-sans`}>
       <div className="container mx-auto px-8 md:px-0 lg:px-8 flex flex-col md:flex-row justify-between items-start">
         <div className="flex flex-col md:flex-row items-start ">
           <img src="../../Images/logo.png" alt="Logo" className="w-[80px] h-[80px] mb-4 md:mb-0 md:mr-4 rounded-full" />

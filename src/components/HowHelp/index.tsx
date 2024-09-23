@@ -1,10 +1,13 @@
-import { HoverEffect } from "./CardHoverFX"; 
+import { div } from "framer-motion/client";
+import { HoverEffect } from "./CardHoverFX";
 
 export function HowHelp() {
     return (
-        <div className="max-w-6xl mx-auto px-2 md:px-10 py-20 flex flex-col items-center bg-textwhite">
-            <h2 className="text-3xl md:text-4xl font-nunito font-semibold my-6">Hur kan vi hjälpa dig?</h2>
-            <HoverEffect items={projects} />
+        <div className="flex justify-center bg-textwhite">
+            <div className="max-w-6xl mx-auto px-2 md:px-10 py-20 flex flex-col items-center">
+                <h2 className="text-3xl md:text-4xl font-nunito font-semibold my-6">Hur kan vi hjälpa dig?</h2>
+                <HoverEffect items={projects} />
+            </div>
         </div>
     );
 }

@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 const Hero = () => {
     return (
         <section
-            className="relative w-full h-[700px] bg-cover bg-center text-neutral-100 font-sans"
+            className="relative w-full h-[700px] max-h-screen bg-cover bg-center text-neutral-100 font-sans"
             style={{ backgroundImage: "url('/images/niceteeth.jpg')" }}
         >
             <Navbar />
