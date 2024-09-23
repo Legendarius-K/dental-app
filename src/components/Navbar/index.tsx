@@ -59,21 +59,21 @@ const Navbar = () => {
     ]
 
     return (
-        <nav className={`fixed top-0 left-0 z-40 w-full py-4 flex justify-between items-center transition-all px-4 h-[56px] bg-black bg-opacity-60 ${dropdownOpen ? "text-black" : ''}`}>
+        <nav className={`fixed top-0 left-0 z-40 w-full py-4 flex justify-between items-center transition-all px-4 h-[56px] bg-black bg-opacity-60 ${dropdownOpen ? "text-textmain" : ''}`}>
             <div onClick={closeMenu} className={`OVERLAY fixed top-0 left-0 bg-black opacity-40 w-full h-screen ${dropdownOpen || isOpen ? '' : 'hidden'}`}></div>
-            <Link href={'/'}><h1 className={`relative pl-10 md:pl-0 z-20 text-lg md:text-xl font-semibold  ${dropdownOpen ? "text-black" : ''}`}>Tand Trygg</h1></Link>
+            <Link href={'/'}><h1 className={`relative pl-10 md:pl-0 z-20 text-lg md:text-xl font-semibold  ${dropdownOpen ? "text-textmain" : ''}`}>Tand Trygg</h1></Link>
             <div className="gap-5 lg:gap-10 hidden md:flex">
-                <div onClick={toggleDropdown} className={`flex items-center z-40 cursor-pointer transition-all ${dropdownOpen ? "text-black" : ''} relative hover:cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-200 before:absolute before:bg-teal-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[55%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-200 after:absolute after:bg-teal-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[55%] after:bottom-0 after:right-[50%]`}>
+                <div onClick={toggleDropdown} className={`flex items-center z-40 cursor-pointer transition-all ${dropdownOpen ? "text-textmain before:bg-mainblue before:origin-center before:h-[1px] before:w-[55%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-200 after:absolute after:bg-mainblue after:origin-center after:h-[1px] after:w-[55%] after:bottom-0 after:right-[50%]" : ''} relative hover:cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-200 before:absolute before:bg-mainblue before:origin-center before:h-[1px] before:w-0 hover:before:w-[55%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-200 after:absolute after:bg-mainblue after:origin-center after:h-[1px] after:w-0 hover:after:w-[55%] after:bottom-0 after:right-[50%]`}>
                     <p>Behandlingar</p>
                     <div className="w-[17px] ml-1 pt-1">
                         {!dropdownOpen && <Image className="w-full h-auto" src={arrowWhite} alt="arrow" />}
                         {dropdownOpen && <Image className="w-full h-auto pb-1" src={arrowBlack} alt="arrow" />}
                     </div>
                 </div>
-                <div className={`absolute z-60 left-0 flex w-full justify-center bg-neutral-100 text-black transition-transform duration-300 pt-[100px] pb-6 ${!dropdownOpen ? "-translate-y-[200%]" : "-translate-y-10"}`}>
+                <div className={`absolute z-60 left-0 flex w-full justify-center bg-neutral-100 transition-transform duration-300 pt-[100px] pb-6 ${!dropdownOpen ? "-translate-y-[200%]" : "-translate-y-10"}`}>
                     <div className="grid grid-cols-2">
                         {dropdownItems.map((item, index) =>
-                            <Link key={index} className="px-20 flex hover:bg-teal-100 rounded-xl py-2" href={item.link}>
+                            <Link key={index} className="px-20 flex hover:bg-lightblue/70 rounded-xl py-2" href={item.link}>
                                 <div className="w-[43px] mr-2">
                                     <Image className="w-full h-auto" src={item.image} alt={item.title} />
                                 </div>
@@ -85,7 +85,7 @@ const Navbar = () => {
                         }
                     </div>
                 </div>
-                {navItems.map((item, index) => <Link key={index} className="z-40 relative hover:cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-200 before:absolute before:bg-teal-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[55%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-200 after:absolute after:bg-teal-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[55%] after:bottom-0 after:right-[50%]" href={item.link}>{item.title}</Link>)}
+                {navItems.map((item, index) => <Link key={index} className="z-40 relative hover:cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-200 before:absolute before:bg-mainblue before:origin-center before:h-[1px] before:w-0 hover:before:w-[55%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-200 after:absolute after:bg-mainblue after:origin-center after:h-[1px] after:w-0 hover:after:w-[55%] after:bottom-0 after:right-[50%]" href={item.link}>{item.title}</Link>)}
             </div>
             <div className={` ${isOpen && 'hidden'}`}>
                 <BookButton text="BOKA TID" buttonStyle="text-sm py-[7px] w-[90px] shadow-lg" />
@@ -130,60 +130,3 @@ const Navbar = () => {
 };
 
 export default Navbar
-
-
-
-// < Link className = "px-20 flex hover:bg-teal-100 rounded-xl py-2 transition-all" href = { '/emergency'} >
-//                         <div className="w-[43px] mr-2">
-//                             <Image className="w-full h-auto" src={emergency} alt="emergency" />
-//                         </div>
-//                         <div>
-//                             <h3>Akut tandvård</h3>
-//                             <p className="text-sm text-gray-500">Vid tandvärk och olyckor</p>
-//                         </div>
-
-//                     </ >
-
-//                     <Link className="px-20 flex hover:bg-teal-100 rounded-xl py-2" href={'/emergency'}>
-//                         <div className="w-[43px] mr-2">
-//                             <Image className="w-full h-auto" src={aesthetic} alt="aesthetic" />
-//                         </div>
-//                         <div>
-//                             <h3>Estetisk tandvård</h3>
-//                             <p className="text-sm text-gray-500">Korrigera tändernas utseende</p>
-//                         </div>
-//                     </Link>
-
-//                     <Link className="px-20 flex hover:bg-teal-100 rounded-xl py-2" href={'/emergency'}>
-//                         <div className="w-[43px] mr-2">
-//                             <Image className="w-full h-auto" src={teeth} alt="teeth" />
-//                         </div>
-//                         <div>
-//                             <h3>Alla behandlingar</h3>
-//                             <p className="text-sm text-gray-500">Se alla våra behandlingar</p>
-//                         </div>
-//                     </Link>
-
-//                 </div >
-// <div className="flex flex-col">
-
-//     <Link className="px-20 flex hover:bg-teal-100 rounded-xl py-2" href={'/emergency'}>
-//         <div className="w-[43px] mr-2">
-//             <Image className="w-full h-auto" src={implants} alt="implants" />
-//         </div>
-//         <div>
-//             <h3>Tandimplantat</h3>
-//             <p className="text-sm text-gray-500">Ersättning av förlorade tänder</p>
-//         </div>
-//     </Link>
-
-
-//     <Link className="px-20 flex hover:bg-teal-100 rounded-xl py-2" href={'/emergency'}>
-//         <div className="w-[43px] mr-2">
-//             <Image className="w-full h-auto" src={orto} alt="orto" />
-//         </div>
-//         <div>
-//             <h3>Tandreglering</h3>
-//             <p className="text-sm text-gray-500">För sneda eller trångställda tänder</p>
-//         </div>
-//     </Link>
