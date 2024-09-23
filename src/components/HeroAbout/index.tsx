@@ -6,7 +6,7 @@ import Navbar from "../Navbar";
 const HeroAbout = () => {
     return (
         <section
-            className="relative w-full h-[600px] bg-cover bg-center text-white font-sans"
+            className="relative w-full h-[600px] bg-cover bg-center text-textwhite font-sans"
             style={{ backgroundImage: "url('/images/hero-about1.jpg')" }}
         >
             <div className="absolute inset-0 bg-black opacity-10 z-10"></div>
