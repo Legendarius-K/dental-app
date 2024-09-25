@@ -16,7 +16,7 @@ const about_us = () => {
                     <p className="text-black font-sans lg:pt-4 sm:text-md  lg:max-w-[550px] text-justify">Vår resa har precis börjat, men med starka värderingar, <span className="font-bold text-accent ">engagerade </span>medarbetare och en <span className="font-bold text-accent ">passion</span> för tandvård, är vi fast beslutna att göra <span className="font-bold text-accent ">skillnad</span> i våra patienters liv.</p>
                 </div>
             </div>
-            <ContactForm />
+           <ContactForm />
          </section>
         </>
     )
