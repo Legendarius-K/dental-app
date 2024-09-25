@@ -12,7 +12,7 @@ const prices = () => {
          <PriceMap />
          <Payments />
          <section className="flex flex-col md:flex-row ">
-            <RingUs map={false} />
+            <RingUs />
             <ContactForm />
          </section>
          
