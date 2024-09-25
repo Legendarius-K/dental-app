@@ -2,6 +2,7 @@ import ContactForm from "@/components/ContactForm";
 import HeroPrices from "@/components/HeroPrices";
 import Payments from "@/components/Payments";
 import PriceMap from "@/components/PriceMap";
+import RingUs from "@/components/RingUs";
 
 
 const prices = () => {
@@ -10,7 +11,11 @@ const prices = () => {
          <HeroPrices />
          <PriceMap />
          <Payments />
-         <ContactForm />
+         <section className="flex flex-col md:flex-row ">
+            <RingUs map={false} />
+            <ContactForm />
+         </section>
+         
         </>
     )
 };
