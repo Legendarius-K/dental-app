@@ -98,11 +98,12 @@ function HomeInside() {
               }
             </label>
             <input
-              type="text"
-              {...register("name", { required: true })}
-              className={` form-control w-full border border-black rounded-md bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-darkblue focus:shadow-md p2 ${errors.name ? "border-red-500" : ""}`}
-              placeholder="Namn"
-            />
+  type="text"
+  {...register("name", { required: true })}
+  className={`form-control w-full border-b-2 border-darkblue bg-white py-3 px-6 text-base font-medium text-mainblue outline-none focus:border-mainblue focus:shadow-md p2 ${errors.name ? "border-red-500" : ""}`}
+  placeholder="Namn"
+/>
+
             {errors.name && (
               <span className="text-red-500">required</span>
             )}
@@ -124,7 +125,7 @@ function HomeInside() {
             <input
               type="text"
               {...register("surname", { required: true })}
-              className={`form-control w-full border border-black rounded-md bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-darkblue focus:shadow-md p2 ${errors.name ? "border-red-500" : ""}`}
+              className={`form-control w-full border-b-2 border-darkblue bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-,ainblue focus:shadow-md p2 ${errors.name ? "border-red-500" : ""}`}
               placeholder="Efternamn"
             />
             {errors.name && (
@@ -151,7 +152,7 @@ function HomeInside() {
               <input
                 type="email"
                 {...register("email", { required: true })}
-                className={`form-control w-full border border-black rounded-md bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-darkblue focus:shadow-md p2 ${errors.email ? "border-red-500" : ""}`}
+                className={`form-control w-full border-b-2 border-darkblue bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-mainblue focus:shadow-md p2 ${errors.email ? "border-red-500" : ""}`}
                 placeholder="abc@gmail.com"
               />
               {errors.email && (
@@ -169,7 +170,7 @@ function HomeInside() {
               <input
                 type="tel"
                 {...register("phoneNumber")}
-                className="form-control w-full border border-black rounded-md bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-darkblue focus:shadow-md p2"
+                className="form-control w-full border-b-2 border-darkblue bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-mainblue focus:shadow-md p2"
                 placeholder="070-XXX XXX"
               />
             </div>
@@ -184,7 +185,7 @@ function HomeInside() {
                 </label>
                 <select
                   {...register("reasonForContact", { required: true })}
-                  className="form-control w-full border border-black rounded-md bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-darkblue focus:shadow-md p2"
+                  className="form-control w-full border-b-2 border-darkblue bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-mainblue focus:shadow-md p2"
                   
                 >
                   <option value="">Allmän information</option>
@@ -217,7 +218,7 @@ function HomeInside() {
             <textarea
               rows={4}
               {...register("message", { required: true })}
-              className={`form-control w-full border border-black rounded-md bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-darkblue focus:shadow-md p2 ${errors.message ? "border-red-500" : ""}`}
+              className={`form-control w-full border-2 border-darkblue rounded-md bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-mainblue focus:shadow-md p2 ${errors.message ? "border-red-500" : ""}`}
               placeholder="Skriv ditt meddelandet"
             />
             {errors.message && (
