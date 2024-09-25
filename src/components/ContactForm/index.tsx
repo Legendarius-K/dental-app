@@ -188,8 +188,8 @@ function HomeInside() {
                   className="form-control w-full border-b-2 border-darkblue bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-mainblue focus:shadow-md p2"
                   
                 >
-                  <option value="">Allmän information</option>
                   <option value="bokning">Boka tid</option>
+                  <option value="">Allmän information</option>
                   <option value="avbokning">Avbokning/Ombokning</option>
                   <option value="behandling">Behandlings fråga</option>
                   <option value="Feedback">Feedback</option>
