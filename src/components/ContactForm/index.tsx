@@ -75,7 +75,7 @@ function HomeInside() {
  
 
   return (
-    <div className="container">
+    <div className="container basis-1/2">
       <main className="mt-5">
         <form
           id="contactForm"
