@@ -11,7 +11,7 @@ import Button from "../Button";
 
 interface FormData {
   name: string;
-  jobTitle: string;
+  surname: string;
   email: string;
   phoneNumber?: string;
   reasonForContact?: string;
@@ -82,10 +82,11 @@ function HomeInside() {
           onSubmit={handleSubmit(onSubmit)}
           className="bg-pt-gray2 p-4"
         >
-          <div className="wrapperName mb-5">
+          <div className="flex gap-3">
+            <div className="wrapperName mb-5 basis-1/2 ">
             <label
               htmlFor="name"
-              className="mb-1 block text-base font-medium text-black p1"
+              className="mb-1 block text-base font-medium text-black p1 font-bold"
             >
               Namn
               {
@@ -99,34 +100,46 @@ function HomeInside() {
             <input
               type="text"
               {...register("name", { required: true })}
-              className={`form-control w-full border border-black rounded-md bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-purple-500 focus:shadow-md p2 ${errors.name ? "border-red-500" : ""}`}
+              className={` form-control w-full border border-black rounded-md bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-darkblue focus:shadow-md p2 ${errors.name ? "border-red-500" : ""}`}
               placeholder="Namn"
             />
             {errors.name && (
               <span className="text-red-500">required</span>
             )}
           </div>
-          <div className="wrapperJobTitle mb-5">
+          <div className="wrapperSurname mb-5 basis-1/2">
             <label
-              htmlFor="jobTitle"
+              htmlFor="surname"
               className="mb-1 block text-base font-medium text-black p1"
             >
-              job title
+              Efternamn
+              {
+                <span
+                  className={`ml-1 ${errors.name ? "text-red-500" : "text-black"}`}//change surname??
+                >
+                  *
+                </span>
+              }
             </label>
             <input
               type="text"
-              {...register("jobTitle")}
-              className={`form-control w-full border border-black rounded-md bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-purple-500 focus:shadow-md p2`}
-              placeholder="job title"
+              {...register("surname", { required: true })}
+              className={`form-control w-full border border-black rounded-md bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-darkblue focus:shadow-md p2 ${errors.name ? "border-red-500" : ""}`}
+              placeholder="Efternamn"
             />
-          </div>
+            {errors.name && (
+              <span className="text-red-500">required</span>
+            )}
+          </div></div>
+          
+          
           <div className="wrapper flex flex-col md:flex-row md:gap-3">
             <div className="flex-grow wrapperEmail mb-5">
               <label
                 htmlFor="email"
                 className="mb-1 block text-base font-medium text-black p1"
               >
-                email
+                Email
                 {
                   <span
                     className={`ml-1 ${errors.email ? "text-red-500" : "text-black"}`}
@@ -138,8 +151,8 @@ function HomeInside() {
               <input
                 type="email"
                 {...register("email", { required: true })}
-                className={`form-control w-full border border-black rounded-md bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-purple-500 focus:shadow-md p2 ${errors.email ? "border-red-500" : ""}`}
-                placeholder="email"
+                className={`form-control w-full border border-black rounded-md bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-darkblue focus:shadow-md p2 ${errors.email ? "border-red-500" : ""}`}
+                placeholder="abc@gmail.com"
               />
               {errors.email && (
                 <span className="text-red-500">required</span>
@@ -151,38 +164,48 @@ function HomeInside() {
                 className="mb-1 block text-base font-medium text-black p1"
                 id="phoneNumber"
               >
-                telefonnummer
+                Telefonnummer
               </label>
               <input
                 type="tel"
                 {...register("phoneNumber")}
-                className="form-control w-full border border-black rounded-md bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-purple-500 focus:shadow-md p2"
-                placeholder="telefonnummer"
+                className="form-control w-full border border-black rounded-md bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-darkblue focus:shadow-md p2"
+                placeholder="070-XXX XXX"
               />
             </div>
           </div>
           <div className="wrapperRFC mb-5">
-            <label
-              htmlFor="reasonForContact"
-              className="mb-1 block text-base font-medium text-black p1"
-              id="reasonForContact"
-            >
-              reasonForContact
-            </label>
-            <input
-              type="text"
-              {...register("reasonForContact")}
-              className="form-control w-full border border-black rounded-md bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-purple-500 focus:shadow-md p2"
-              placeholder="reasonForContactPlaceholder"
-            />
-          </div>
+                <label
+                  htmlFor="reasonForContact"
+                  className="mb-1 block text-base font-medium text-black p1"
+                  id="reasonForContact"
+                >
+                  Vad gäller ditt ärende?
+                </label>
+                <select
+                  {...register("reasonForContact", { required: true })}
+                  className="form-control w-full border border-black rounded-md bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-darkblue focus:shadow-md p2"
+                  
+                >
+                  <option value="">Allmän information</option>
+                  <option value="bokning">Boka tid</option>
+                  <option value="avbokning">Avbokning/Ombokning</option>
+                  <option value="behandling">Behandlings fråga</option>
+                  <option value="Feedback">Feedback</option>
+                  <option value="övrigt">Övrigt</option>
+                </select>
+                {errors.reasonForContact && (
+                  <span className="text-red-500">required</span>
+                )}
+              </div>
+
           <div className="wrapperMessage mb-5">
             <label
               htmlFor="message"
               className="mb-1 block text-base font-medium text-black p1"
               id="message"
             >
-              writeMessage
+              Meddelandet
               {
                 <span
                   className={`ml-1 ${errors.message ? "text-red-500" : "text-black"}`}
@@ -194,25 +217,25 @@ function HomeInside() {
             <textarea
               rows={4}
               {...register("message", { required: true })}
-              className={`form-control w-full border border-black rounded-md bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-purple-500 focus:shadow-md p2 ${errors.message ? "border-red-500" : ""}`}
-              placeholder="writeMessagePlaceholder"
+              className={`form-control w-full border border-black rounded-md bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-darkblue focus:shadow-md p2 ${errors.message ? "border-red-500" : ""}`}
+              placeholder="Skriv ditt meddelandet"
             />
             {errors.message && (
               <span className="text-red-500">required</span>
             )}
           </div>
           <p className="p3 mb-5">
-            recaptcha1
+          Sidan skyddas av reCAPTCHA som tillämpar Googles
             <a
               className="text-blue-500"
               href="https://policies.google.com/privacy"
-            >recaptcha2</a>{" "}
-            recaptcha3
+            > Integritespolicy</a>{" "}
+            och
             <a
               className="text-blue-500"
               href="https://policies.google.com/terms"
-            >recaptcha4</a>
-            recaptcha5"
+            > Anvädarvilkor</a>
+            .
           </p>
           {/* {notification && <p className="mt-3 text-info">{notification}</p>} */}
           <div className="wrapperTerms mb-5 form-check">
@@ -222,20 +245,23 @@ function HomeInside() {
               className="form-check-input"
             />
             <label className="form-check-label ml-1">
-              terms1{" "}
+              Jag gokänner{" "}
               <a
                 className="text-blue-500"
                 href={``}
-              >terms2 `</a>
+              >vilkoren</a>
               *
             </label>
             {errors.terms && (
-              <span className="text-red-500 ml-1">agreeToTerms"</span>
+              <span className="text-red-500 ml-1">agreeToTerms</span>
             )}
           </div>
 
           <div className="wrapperButton flex items-center relative">
-            <Button colorTheme="dark" type="submit" text="sendMessage"/>
+          <button  className={`z-20 relative inline-flex items-center justify-start inline-block overflow-hidden transition-all bg-mainblue rounded-full hover:bg-darkblue group text-sm md:text-xl py-1 md:py-3 w-[200px] h-12 md:h-auto px-3 font-bold`}>
+            <span className="absolute inset-0 border-0 group-hover:border-[25px] ease-linear duration-100 transition-all border-darkblue rounded-full"></span>
+            <span className="relative w-full text-center text-neutral-800 transition-colors duration-200 ease-in-out group-hover:text-white">SKICKA</span>
+        </button>
             {showMessagePopup && (
               <div className="popup bg-[#63d285] text-pt-gray2  ml-3 absolute inset-y-0 left-[-13px] rounded-full button-text py-[15px] px-[32px] h-[48px] w-[303px] flex justify-center items-center text-nowrap">
                 contactBtn
