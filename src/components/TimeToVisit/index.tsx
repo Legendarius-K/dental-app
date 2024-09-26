@@ -1,32 +1,26 @@
 import ContactButton from "../ContactButton";
 import curly from "../../../public/images/curly.png";
 import BookButton from "../BookButton";
+import Image from "next/image";
 
 const TimeToVisit = () => {
     return (
-        <div className="bg-[#B9D9EB] w-full h-[1100px] md:h-[508px] lg:h-[508px] xl:h-[500px] 2xl:h-[384px] relative">
-            <div className="flex flex-col lg:flex-row p-10">
-                <div className="basis-1/2 p-8 md:ml-[100px]">
-                    <p className="text-5xl pb-6">Dags för en undersökning?</p>
-                    <p className="text-xl ">Vi vet att du har hört det förr, men regelbundna besök hos</p>
-                    <p className="text-xl ">tandvården är viktigt för att dina tänder ska må bra. </p>
-                    <p className="text-xl pb-10"> Välkommen tilloss och upplev en trevligare tandläkare.</p>
-                    <div className="flex gap-6 mt-10">
-                    <BookButton text="BOKA ONLINE" buttonStyle="text-xl p-3 w-[200px] font-bold" />
-                    <ContactButton text="KONTAKTA OSS" buttonStyle="text-xl p-3 w-[200px]" />
+        <div className="bg-textwhite flex justify-center">
+            <div className=" w-full text-textmain relative py-0 max-w-[1400px]">
+                <div className="flex flex-col lg:flex-row p-0 items-center">
+                    <div className="w-[95%] lg:w-[45%] font-sans py-16 pt-28 lg:py-24 xl:py-36 px-5 text-center lg:text-start lg:ml-20">
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-nunito font-semibold pb-6">Dags för en undersökning?</h2>
+                        <p className="text-lg text-start md:pl-10 lg:pl-0">Vi vet att du har hört det förr, men regelbundna besök hos tandvården är viktigt för att dina tänder ska må bra. Välkommen till oss och upplev en trevligare tandläkare.</p>
+                        <div className="flex gap-6 mt-10 justify-center lg:justify-start">
+                            <BookButton text="BOKA ONLINE" buttonStyle="md:text-xl p-3 w-[200px] bg-amber-500" />
+                            <ContactButton text="KONTAKTA OSS" buttonStyle="md:text-xl p-3 w-[200px] border-2 border-neutral-400" />
+                        </div>
                     </div>
-                </div>
-                <div className="z-60 min-w-[300px] basis-1/2 relative">
-                    <img 
-                        src={curly.src} 
-                        alt="smiling lady" 
-                        className="absolute bottom-[0px] z-20 hidden lg:inline-flex" 
-                    />
-                    <img 
-                        src={curly.src} 
-                        alt="smiling lady" 
-                        className="absolute bg-[#B9D9EB] z-20 lg:hidden w-full" 
-                    />
+                    <div className="lg:absolute lg:w-1/2 bottom-0 right-0">
+                        <div className="lg:absolute bottom-0 right-[50%] lg:translate-x-1/2 lg:w-[83%] max-w-[590px]">
+                            <Image className="w-full h-auto" src={curly} alt="Girl" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
