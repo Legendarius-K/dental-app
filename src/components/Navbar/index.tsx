@@ -116,7 +116,7 @@ const Navbar = () => {
                         </Link>)
                     }
                 </div>
-                {navItems.map((item, index) => <Link className="text-xl z-40 relative " href={item.link}>{item.title}</Link>)}
+                {navItems.map((item, index) => <Link key={index} className="text-xl z-40 relative " href={item.link}>{item.title}</Link>)}
                 <div className="w-full mt-10">
                     <BookButton text="BOKA TID" buttonStyle="text-lg py-[10px] w-full  shadow-lg" />
                 </div>
