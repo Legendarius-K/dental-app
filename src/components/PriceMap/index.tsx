@@ -1,4 +1,4 @@
-import  Phone  from '../../../public/images/telephone.png';
+import Phone from '../../../public/images/telephone.png';
 import BookButton from '../BookButton';
 
 
@@ -25,12 +25,12 @@ const PriceMap = () => {
                     <BookButton text="BOKA HÄR" buttonStyle="text-sm md:text-xl py-1 md:py-3 w-[200px] h-12 md:h-auto px-3 font-bold" />
                 </div>
                 <div className='flex xl:w-[75%]'>
-                <p className="w-[80%] text-3xl lg:text-5xl p-2 ">Tranås</p>
-                <BookButton text="BOKA HÄR" buttonStyle="text-sm md:text-xl py-1 md:py-3 w-[200px] h-12 md:h-auto px-3 font-bold" />
+                    <p className="w-[80%] text-3xl lg:text-5xl p-2 ">Tranås</p>
+                    <BookButton text="BOKA HÄR" buttonStyle="text-sm md:text-xl py-1 md:py-3 w-[200px] h-12 md:h-auto px-3 font-bold" />
                 </div>
             </div>
-            
-            
+
+
         </section>
     )
 }
