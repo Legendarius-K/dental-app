@@ -22,7 +22,6 @@ const config: Config = {
         lightaccent: "#F5C19D",
         textmain: "rgb(38 38 38)",
         textwhite: "rgb(245 245 245)",
-        textwhite: "rgb(245 245 245)",
       },
       fontFamily: {
         sans: ["Poppins", "sans-serif"],
