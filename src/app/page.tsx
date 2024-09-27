@@ -13,7 +13,7 @@ export default function Home() {
             <HowHelp/>
             <NewInTown/>
             <SafeCare/>
-            <TimeToVisit />
+            <TimeToVisit background="bg-textwhite"/>
         </main>
   );
 }
