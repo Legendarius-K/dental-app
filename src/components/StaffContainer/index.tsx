@@ -14,7 +14,7 @@ const StaffContainer = () => {
                 <img src={item.pictureUrl} alt="" className="w-32 h-32 rounded-full object-cover"/>
                 
                 <h4 className="text-white text-lg font-bold">{item.name}</h4>
-                <h4 className="text-accent text-md text-center">{item.title}</h4>
+                <h4 className="text-white text-md text-center">{item.title}</h4>
 
             
             </div>)}
