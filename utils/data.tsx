@@ -5,14 +5,19 @@ export const dentists = [
       pictureUrl: "../../images/default-profile.png"
     },
     {
-      name: "Sofia Nilsson",
+      name: "Sohran Nilsson",
       title: "Allmäntandläkare",
-      pictureUrl: "../../images/default-profile.png"
+      pictureUrl: "../../images/dentist2.png"
     },
     {
       name: "Erik Johansson",
       title: "Allmäntandläkare",
       pictureUrl: "../../images/default-profile.png"
+    },
+    {
+      name: "Anna Larsson",
+      title: "Tandhygienist",
+      pictureUrl: "../../images/dentist1.jpg"
     },
     {
       name: "Emma Karlsson",
@@ -24,11 +29,7 @@ export const dentists = [
       title: "Tandhygienist",
       pictureUrl: "../../images/default-profile.png"
     },
-    {
-      name: "Anna Larsson",
-      title: "Tandhygienist",
-      pictureUrl: "../../images/default-profile.png"
-    },
+    
     {
       name: "Fredrik Lindberg",
       title: "Specialisttandläkare i käkkirurgi",
