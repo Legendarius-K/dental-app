@@ -34,7 +34,7 @@ const Footer = () => {
                     <p className=" p1 pb-4">Länkar</p>
                     <ul className="flex flex-col md:flex-row align-baseline space-y-4 md:space-y-0 md:py-4">
                         <li><Link href={``} className="md:pr-4 p2 font-size-[14px] md:underline">Boka tid</Link></li>
-                        <li><Link href={``} className="md:pr-4 p2 font-size-[14px] md:underline">Kontakta oss</Link></li>
+                        <li><Link href={`/about_us`} className="md:pr-4 p2 font-size-[14px] md:underline">Kontakta oss</Link></li>
                         <li><Link href={`/about_us`} className="md:pr-4 p2 font-size-[14px] md:underline">Om oss</Link></li>
                         <li><Link href={`/prices`} className="md:pr-4 p2 font-size-[14px] md:underline">Priser</Link></li>
                     </ul>

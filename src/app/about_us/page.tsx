@@ -1,6 +1,7 @@
 import ContactForm from "@/components/ContactForm";
 import HeroAbout from "@/components/HeroAbout"
 import RingUs from "@/components/RingUs";
+import StaffContainer from "@/components/StaffContainer";
 
 
 const about_us = () => {
@@ -18,6 +19,7 @@ const about_us = () => {
             </div>
            <ContactForm />
          </section>
+         <StaffContainer />
         </>
     )
 };
