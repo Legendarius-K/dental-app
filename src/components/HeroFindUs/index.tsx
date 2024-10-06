@@ -10,7 +10,7 @@ const HeroFindUs = () => {
     return (
         <section
             className="relative w-full h-[550px] max-h-screen bg-cover bg-center text-neutral-100 font-sans"
-            style={{ backgroundImage: "url('/images/1.png')" }}
+            style={{ backgroundImage: "url('/images/9.png')" }}
         >
             <Navbar />
             <div className="absolute inset-0 bg-black opacity-40 z-10"></div>
