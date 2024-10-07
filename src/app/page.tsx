@@ -8,8 +8,6 @@ export default function Home() {
     return (
         <main className="h-full">
             <Hero/>
-            
-            
             <HowHelp/>
             <NewInTown/>
             <SafeCare/>
