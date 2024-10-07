@@ -38,9 +38,9 @@ const Navbar = () => {
 
     useEffect(() => {
         if (dropdownOpen || isOpen) {
-            document.body.classList.add("overflow-y-hidden", "touch-none", "overscroll-none")
+            document.body.classList.add("overflow-y-hidden", "touch-none", "overscroll-none", "scrollbar-gutter-stable")
         } else {
-            document.body.classList.remove("overflow-y-hidden", "touch-none", "overscroll-none")
+            document.body.classList.remove("overflow-y-hidden", "touch-none", "overscroll-none", "scrollbar-gutter-stable")
         }
     }, [dropdownOpen, isOpen]);
 
@@ -59,7 +59,7 @@ const Navbar = () => {
     ]
 
     return (
-        <nav className={`fixed top-0 left-0 z-40 w-full py-4 flex justify-between items-center transition-all px-4 h-[56px] bg-black bg-opacity-60 ${dropdownOpen ? "text-textmain" : ''}`}>
+        <nav className={` fixed top-0 left-0 z-40 w-full py-4 flex justify-between items-center transition-all px-4 h-[56px] bg-black bg-opacity-60 ${dropdownOpen ? "text-textmain" : 'text-textwhite'}`}>
             <div onClick={closeMenu} className={`OVERLAY fixed top-0 left-0 bg-black opacity-40 w-full h-screen ${dropdownOpen || isOpen ? '' : 'hidden'}`}></div>
             <Link href={'/'}><h1 className={`relative pl-10 md:pl-0 z-20 text-lg md:text-xl font-semibold  ${dropdownOpen ? "text-textmain" : ''}`}>Tand Trygg</h1></Link>
             <div className="gap-5 lg:gap-10 hidden md:flex">
@@ -73,7 +73,7 @@ const Navbar = () => {
                 <div className={`absolute z-60 left-0 flex w-full justify-center bg-neutral-100 transition-transform duration-300 pt-[100px] pb-6 ${!dropdownOpen ? "-translate-y-[200%]" : "-translate-y-10"}`}>
                     <div className="grid grid-cols-2">
                         {dropdownItems.map((item, index) =>
-                            <Link key={index} className="px-20 flex hover:bg-lightblue/70 rounded-xl py-2" href={item.link}>
+                            <Link onClick={closeMenu} key={index} className="pr-20 pl-3 flex transition-all border-lightblue/70 py-2 hover:bg-gradient-to-r rounded hover:from-lightblue/60 hover:to-textwhite" href={item.link}>
                                 <div className="w-[43px] mr-2">
                                     <Image className="w-full h-auto" src={item.image} alt={item.title} />
                                 </div>
@@ -108,7 +108,7 @@ const Navbar = () => {
                 </div>
                 <div className={`text-neutral-500 z-60 flex flex-col gap-3 w-full justify-center bg-neutral-100 transition-all duration-300 py-3 pl-3 overflow-hidden ${!dropDownBurger ? "hidden" : ""}`}>
                     {dropdownItems.map((item, index) =>
-                        <Link key={index} className="flex" href={item.link}>
+                        <Link onClick={closeMenu} key={index} className="flex" href={item.link}>
                             <div className="w-[25px] mr-2">
                                 <Image className="w-full h-auto" src={item.image} alt={item.title} />
                             </div>
@@ -116,13 +116,10 @@ const Navbar = () => {
                         </Link>)
                     }
                 </div>
-                {navItems.map((item, index) => <Link key={index} className="text-xl z-40 relative " href={item.link}>{item.title}</Link>)}
+                {navItems.map((item, index) => <Link onClick={closeMenu} key={index} className="text-xl z-40 relative " href={item.link}>{item.title}</Link>)}
                 <div className="w-full mt-10">
                     <BookButton text="BOKA TID" buttonStyle="text-lg py-[10px] w-full  shadow-lg" />
                 </div>
-                {/* <div className="text-orange-600 text-sm absolute bottom-20 left-10">
-                    <p>070-123 456 78</p>
-                </div> */}
             </div>
 
         </nav>
