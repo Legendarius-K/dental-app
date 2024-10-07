@@ -20,7 +20,7 @@ const EmergencyInfo = () => {
                 </div>
                 <div>
                     <h3 className="text-2xl md:text-3xl font-nunito font-semibold text-left text-bluegray mb-2 md:-ml-6">Pris för akut tandvård</h3>
-                    <p className="border-l-[1px] border-neutral-300 pl-3">En akut undersökning kostar 795 kronor. De åtgärder som kan behövas varierar beroende på problemets omfattning, och kostnaderna kan därför skilja sig åt mellan olika behandlingar. Inga ingrepp kommer att påbörjas utan att du först fått ett kostnadsförslag. Aqua Dental tillämpar inga extra avgifter för akut tandvård på kvällar eller helger, vilket innebär att priset är detsamma oavsett när du besöker oss.</p>
+                    <p className="border-l-[1px] border-neutral-300 pl-3">En akut undersökning kostar 795 kronor. De åtgärder som kan behövas varierar beroende på problemets omfattning, och kostnaderna kan därför skilja sig åt mellan olika behandlingar. Inga ingrepp kommer att påbörjas utan att du först fått ett kostnadsförslag. Trygg Tandvård tillämpar inga extra avgifter för akut tandvård på kvällar eller helger, vilket innebär att priset är detsamma oavsett när du besöker oss.</p>
                 </div>
                 <div>
                     <h3 className="text-2xl md:text-3xl font-nunito font-semibold text-left text-bluegray mb-2 md:-ml-6">När behöver du akut tandvård?</h3>
