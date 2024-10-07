@@ -35,7 +35,7 @@ type ContactSquareProps = {
 
 export const ContactSquare = ({ title, two, three, four, five, six, seven, phone, email }: ContactSquareProps) => {
     return (
-        <div className="text-base text-neutral-500 font-sans p-5 w-full sm:w-[90%] shadow-lg h-[200px] rounded">
+        <div className="text-base text-neutral-500 font-sans p-5 w-full sm:w-[90%] shadow-lg h-[200px] rounded bg-white">
             <h3 className="font-nunito text-textmain text-2xl font-bold">{title}</h3>
             <p>{two}</p>
             <p>{three}</p>
