@@ -21,7 +21,7 @@ const emergency = () => {
                             <p><span className="font-semibold">Hos oss möts du av erfarna tandläkare och tandsköterskor</span> som använder den senaste tekniken. Även om du har tandvärk eller lider av tandläkarskräck, är vi experter på att skapa en behaglig och trygg upplevelse under hela ditt besök.</p>
                             <p><span className="font-semibold">Trygg Tandvård har inget extra tillägg för akut tandvård</span> på kvällar och helger, medan många andra tandläkare fortfarande tillämpar påslag för dessa tider. Hos oss betalar du samma pris för tandvård oavsett tid på dygnet eller veckodag.</p>
                             <div className="w-full flex justify-center md:justify-start">
-                                <BookButton text="Boka nu" buttonStyle="w-[300px] md:w-[200px] py-3 mt-10 shadow-lg" />
+                                <BookButton text="BOKA NU" buttonStyle="w-[300px] md:w-[200px] py-3 mt-10 shadow-lg md:text-xl" />
                             </div>
                         </div>
                         <div className="md:w-1/2 w-full">
