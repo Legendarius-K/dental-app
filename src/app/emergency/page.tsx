@@ -4,16 +4,16 @@ import { contact } from "@/utils/data";
 import BookButton from "@/components/BookButton";
 import EmergencyInfo from "@/components/EmergencyInfo";
 import TimeToVisit from "@/components/TimeToVisit";
-import Hero from "@/components/HeroEmergency";
+import Hero from "@/components/Heroes/HeroEmergency";
 
 const emergency = () => {
     return (
         <>
-        <Hero/>
+            <Hero />
             <main className="bg-white flex flex-col items-center">
                 <div className="md:pt-16 flex flex-col items-center max-w-[1150px] p-6 md:p-10">
                     {/* <h2 className="mt-20 md:my-6 text-4xl md:text-5xl font-semibold text-bluegray">Akut tandvård</h2> */}
-                    <section className="w-full flex flex-col-reverse md:flex-row gap-16 my-10">
+                    <section className="w-full flex flex-col md:flex-row gap-16 my-10">
                         <div className="md:w-1/2 w-full flex flex-col gap-5 font-sans">
                             <h3 className="text-2xl md:text-3xl font-nunito font-semibold text-center md:text-left text-bluegray">Plötslig tandvärk?</h3>
                             <p><span className="font-semibold">När du råkar ut för akuta tandproblem</span> är det avgörande att få snabb och rätt hjälp. Oavsett om du lider av tandvärk, känsliga tänder eller en skadad tand eller fyllning, ska du inte behöva gå runt med smärta. Trygg Tandvård kliniker erbjuder akut tandvård av hög kvalitet, med generösa öppettider på både vardagar, kvällar och helger.</p>
