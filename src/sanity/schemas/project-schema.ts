@@ -8,6 +8,11 @@ const prices = {
     type: "document",
     fields: [
         {
+        name: "title",
+        title: "Title",
+        type: "string"
+    },
+        {
             name: "treatment",
             title: "Treatment",
             type: "string"
