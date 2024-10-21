@@ -13,8 +13,8 @@ interface PriceTypes {
 
 export const getPrices = async (): Promise<PriceTypes[]> => {
     const client = createClient({
-        projectId,
-        dataset
+        projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+        dataset: process.env.NEXT_PUBLIC_SANITY_DATASET
     });
 
     return client.fetch<PriceTypes[]>(
