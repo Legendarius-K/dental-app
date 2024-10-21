@@ -1,6 +1,4 @@
-import treatments from "@/app/treatments/page";
-import { source } from "framer-motion/client";
-import { title } from "process";
+
 
 const prices = {
     name: "prices",
