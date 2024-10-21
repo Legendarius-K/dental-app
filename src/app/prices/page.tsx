@@ -10,9 +10,10 @@ const prices = () => {
     return (
         <>
             <HeroPrices />
-            <PriceList />
+            
             <PriceMap />
             <Payments />
+            <PriceList />
             <section className="flex flex-col md:flex-row ">
                 <RingUs />
                 <ContactForm />
