@@ -1,5 +1,5 @@
 import { createClient, groq } from "next-sanity";
-import { dataset, projectId } from "./env";
+
 
 interface PriceTypes {
     title: string;
@@ -13,8 +13,9 @@ interface PriceTypes {
 
 export const getPrices = async (): Promise<PriceTypes[]> => {
     const client = createClient({
-        projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-        dataset: process.env.NEXT_PUBLIC_SANITY_DATASET
+        projectId: "3fnu4ihh",
+        dataset: "production",
+        useCdn: false
     });
 
     return client.fetch<PriceTypes[]>(
