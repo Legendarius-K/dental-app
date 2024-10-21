@@ -8,9 +8,9 @@ const PriceList= async () => {
     return (
         <div className="text-[16px] flex flex-col font-bold p-8">
             {prices.map((price, index)=> 
-            <div className="grid grid-cols-5 pt-5">
-                <p key={index}>{price.code}</p>
-                <p className="col-span-3" key={index}>{price.treatment}</p>
+            <div className="grid grid-cols-4 pt-5">
+                <p key={index} className="pl-8">{price.code}</p>
+                <p className="col-span-2" key={index}>{price.treatment}</p>
                 <div className="flex flex-col sm:grid sm:grid-cols-3 ">
                     <p key={index} className="text-right">{price.amount_under_3000}kr</p>
                     <p key={index} className="text-bluegray text-right">{price.amount_3000_15000}kr</p>
