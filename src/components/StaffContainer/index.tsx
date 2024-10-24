@@ -1,4 +1,4 @@
-import { dentists } from "../../../utils/data";
+import { dentists } from "../../utils/data";
 
 
 const StaffContainer = () => {
