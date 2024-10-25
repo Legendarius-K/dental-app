@@ -16,7 +16,7 @@ const Hero = () => {
             <div className="absolute inset-0 bg-black opacity-40 z-10"></div>
             <div className="absolute top-16 left-3 text-[12px] text-neutral-200 z-30">Allmäntandvård | Specialisttandvård | Tandreglering</div>
             <div className="ml-6 mr-6 md:ml-[80px] xl:ml-[130px]">
-                <h1 className="relative z-20 text-4xl md:text-6xl max-w-[500px] pt-52 md:pt-[190px] font-nunito font-bold">Tandvård för ett <span className={heroUnderline}>friskt</span> och <span className={heroUnderline}>hållbart</span> leende</h1>
+                <h1 className="relative z-20 text-4xl md:text-6xl max-w-[500px] pt-52 md:pt-[190px] font-nunito font-bold">Tandvård för ett <span className="underline decoration-[#84DAE0] decoration-2 underline-offset-4">friskt</span> och <span className="underline decoration-[#84DAE0] decoration-2 underline-offset-4">hållbart</span> leende</h1>
                 <h2 className="relative z-20 text-sm md:text-lg max-w-[500px] pt-6 font-light"><span className="font-semibold">Gratis första konsultation</span> – För alla nya patienter!</h2>
                 <h2 className="relative z-20 text-sm md:text-lg max-w-[500px] pt-3 font-light"><span className="font-semibold">Familjerabatt</span> – Få rabatt när hela familjen bokar sina besök samtidigt</h2>
             </div>
