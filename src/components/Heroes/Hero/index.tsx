@@ -37,7 +37,7 @@ const Hero = () => {
                 <BookButton text="BOKA ONLINE" buttonStyle="text-base md:text-xl py-1 md:py-3 w-[200px] h-12 md:h-auto px-3" />
                 <ContactButton text="KONTAKTA OSS" buttonStyle="text-base md:text-xl py-1 md:py-3 w-[200px] h-12 md:h-auto px-3" />
             </motion.div>
-            <div className="flex z-30 absolute inset-x-0 bottom-0 h-32 md:h-14 flex-wrap md:flex-nowrap justify-around items-center text-pt-navyblue p-4 bg-pt-gray2 bg-black/20 text-neutral-100">
+            <div className="flex z-30 absolute inset-x-0 bottom-0 h-24 md:h-12 flex-wrap md:flex-nowrap justify-around items-center text-pt-navyblue p-4 bg-pt-gray2 bg-black/20 text-neutral-100">
                 <div className="w-[150px] md:w-auto  md:text-left mb-2 md:mb-0 text-[12px] md:">
                     <p>&#8226; Omfattande garantier</p>
                 </div>
