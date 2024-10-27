@@ -57,7 +57,7 @@ const Navbar = () => {
         { image: aesthetic, title: "Estetisk tandvård", subTitle: "Korrigera tändernas utseende", link: '/aesthetics' },
         { image: orto, title: "Tandreglering", subTitle: "För sneda eller trångställda tänder", link: '/orthodontics' },
         { image: exam, title: "Basundersökning", subTitle: "Bedömning av tänder och tandhälsa", link: '/exam' },
-        { image: teeth, title: "Alla behandlingar", subTitle: "Se alla våra behandlingar", link: '/treatments' },
+        { image: teeth, title: "Alla behandlingar", subTitle: "Se alla våra behandlingar", link: '/all-treatments' },
     ]
 
     return (
