@@ -7,6 +7,7 @@ import emergency from "../../../public/images/emergency.png"
 import aesthetic from "../../../public/images/aesthetic.png"
 import implants from "../../../public/images/implant.png"
 import teeth from "../../../public/images/teeth.png"
+import exam from "../../../public/images/dental-exam.png"
 import arrowBlack from "../../../public/images/nav-arrow-black.svg"
 import arrowWhite from "../../../public/images/nav-arrow-white.svg"
 import Image from "next/image";
@@ -55,6 +56,7 @@ const Navbar = () => {
         { image: implants, title: "Tandimplantat", subTitle: "Ersättning av förlorade tänder", link: '/implants' },
         { image: aesthetic, title: "Estetisk tandvård", subTitle: "Korrigera tändernas utseende", link: '/aesthetics' },
         { image: orto, title: "Tandreglering", subTitle: "För sneda eller trångställda tänder", link: '/orthodontics' },
+        { image: exam, title: "Basundersökning", subTitle: "Bedömning av tänder och tandhälsa", link: '/exam' },
         { image: teeth, title: "Alla behandlingar", subTitle: "Se alla våra behandlingar", link: '/treatments' },
     ]
 
