@@ -50,7 +50,7 @@ const Faq = ({ title, questions, dark }: FaqProps) => {
     return (
         <main id="faqComponent" className={cn(
             "bg-neutral-100 py-24 px-8 pb-28 text-pretty font-nunito",
-            dark && 'bg-bluegray'
+            dark && 'bg-bluegray/85'
             )}>
             <section className="content flex flex-col items-center">
                 <div className={cn(
