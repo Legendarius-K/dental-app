@@ -15,7 +15,7 @@ const config: Config = {
         lightblue: "#ADEBE9",
         extralightblue: "#D8FFFD",
         darkblue: "#4DBEC4",
-        bluegray: "#313E45",
+        bluegray: "#36454D",
         darkbluegray: "#222C30",
         lightbluegray: "#455761",
         accent: "#B8725F",
