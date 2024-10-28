@@ -187,3 +187,26 @@ export const treatments = [
         info: "Aqua Dental erbjuder datorstödd titthålskirurgi för tandimplantat."
     },
 ];
+
+export const implantQuestions = [
+    {
+        id: 'q1',
+        question: 'Vad är ett tandimplantat?',
+        answer: 'Ett tandimplantat är en liten skruv i titan som opereras i i käkbenet för att fungera som en konstgjord tandrot. På den fästs en krona, brygga eller bro, beroende på hur många tänder som behöver ersättas.',
+    },
+    {
+        id: 'q2',
+        question: 'Hur lång tid tar behandlingen?',
+        answer: 'Behandlingen sker i två steg: först placeras implantatet i käkbenet, och efter att det har läkt fäster vi en tandkrona eller brygga på implantatet. Hela processen kan ta några månader, beroende på läkningstiden.',
+    },
+    {
+        id: 'q3',
+        question: 'Finns det risker med implantat?',
+        answer: 'Tandimplantat är en säker behandling med mycket goda prognoser. Det är dock viktigt att behandlingen utförs av erfarna specialister, och det är därför vi rekommenderar att du träffar en av våra experter på Trygg Tandvård i Tranås .',
+    },
+    {
+        id: 'q4',
+        question: 'Är du redo att återfå ditt leende?',
+        answer: 'Tveka inte att boka en konsultation hos Trygg Tandvård i Tranås för att få veta mer om dina möjligheter med tandimplantat. Vi finns här för att svara på alla dina frågor och hjälpa dig genom hela processen – från första besöket till ett färdigt leende du kan känna dig stolt över.',
+    },
+];

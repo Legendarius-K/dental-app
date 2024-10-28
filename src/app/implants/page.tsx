@@ -2,9 +2,10 @@ import BookButton from "@/components/BookButton";
 import HeroImplants from "@/components/Heroes/HeroImplants"
 import ImplantsInfo from "@/components/ImplantsInfo";
 import TimeToVisit from "@/components/TimeToVisit";
-import { contact } from "@/utils/data";
+import { contact, implantQuestions } from "@/utils/data";
 import Image from "next/image";
 import implants from './../../../public/images/implant.jpg'
+import Faq from "@/components/Faq";
 
 
 const Implants = () => {
@@ -32,6 +33,7 @@ const Implants = () => {
                 </div>
             </main>
             <ImplantsInfo />
+            <Faq questions={implantQuestions} title="implantat" dark={true}/>
             <TimeToVisit background="bg-lightaccent" />
         </>
     );
