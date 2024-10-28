@@ -1,8 +1,15 @@
 export const contact = {
-    adress: 'Tranåsgatan 1',
-    zipCode: '123 45 Tranås',
+    adress: 'Storgatan 41',
+    zipCode: '573 32 Tranås',
     phone: '070-12 345 678',
     email: 'info@tandtrygg.se'
+}
+
+export const contactNk = {
+    adress: 'Repslagaregatan 30',
+    zipCode: '602 45 Norrköping',
+    phone: '070-12 345 678',
+    email: 'info@sdm.se'
 }
 
 export const treatments = [
