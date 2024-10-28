@@ -4,10 +4,10 @@ import TimeToVisit from "@/components/TimeToVisit";
 
 const find_us = () => {
     return (
-        <section className="bg-textwhite">
+        <section className="bg-textwhite w-full">
             <HeroFindUs />
             <GetInTouch />
-            <TimeToVisit background="bg-lightaccent" />
+            <TimeToVisit  />
         </section>
     )
 };
