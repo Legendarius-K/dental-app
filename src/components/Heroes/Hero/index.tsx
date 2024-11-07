@@ -38,11 +38,19 @@ const Hero = () => {
                 <ContactButton text="KONTAKTA OSS" buttonStyle="text-base md:text-xl py-1 md:py-3 w-[200px] h-12 md:h-auto px-3" />
             </motion.div>
             <div className="flex z-30 absolute inset-x-0 bottom-0 h-24 md:h-12 flex-wrap md:flex-nowrap justify-around items-center text-pt-navyblue p-4 bg-pt-gray2 bg-black/20 text-neutral-100">
+<<<<<<< Updated upstream
                 <div className="w-[150px] md:w-auto  md:text-left mb-2 md:mb-0 text-[12px] md:">
                     <p>&#8226; Omfattande garantier</p>
                 </div>
                 <div className="w-[150px] md:w-auto  md:text-right mb-2 md:mb-0 text-[12px] ">
                     <p>&#8226; Räntefri delbetalning</p>
+=======
+                <div className="w-[139px] md:w-auto  md:text-left mb-0 md:mb-0 text-sm md:">
+                    <p>&#8226; Enkel bokning</p>
+                </div>
+                <div className="w-[139px] md:w-auto  md:text-right mb-0 md:mb-0 text-sm ">
+                    <p>&#8226; Kort väntetid</p>
+>>>>>>> Stashed changes
                 </div>
                 <div className="w-[150px] md:w-auto  md:text-left text-[12px] md:t">
                     <p>&#8226; Specialisttandvård</p>
