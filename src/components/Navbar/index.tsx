@@ -72,7 +72,7 @@ const Navbar = () => {
                         {dropdownOpen && <Image className="w-full h-auto pb-1" src={arrowBlack} alt="arrow" />}
                     </div>
                 </div>
-                <div className={`absolute z-60 left-0 flex w-full justify-center bg-neutral-100 transition-transform duration-300 pt-[100px] pb-6 ${!dropdownOpen ? "-translate-y-[200%]" : "-translate-y-10"}`}>
+                <div className={`absolute z-60 left-0 flex w-full justify-center bg-neutral-100 transition-transform duration-300 pt-[90px] pb-6 ${!dropdownOpen ? "-translate-y-[200%]" : "-translate-y-10"}`}>
                     <div className="grid grid-cols-2">
                         {dropdownItems.map((item, index) =>
                             <Link onClick={closeMenu} key={index} className="pr-20 pl-3 flex transition-all border-lightblue/70 py-2 hover:bg-gradient-to-r rounded hover:from-lightblue/60 hover:to-textwhite" href={item.link}>
@@ -102,7 +102,7 @@ const Navbar = () => {
             <div className={`z-20 fixed top-0 w-4/5 h-screen bg-neutral-100 transition-all text-neutral-800 px-10 py-3 flex flex-col gap-4 ${isOpen ? 'left-0' : '-left-full'}`}>
                 <Link href={'/'}><h1 className={`text-right w-full z-40 text-xl md:text-2xl font-semibold mb-20`}>Tand Trygg</h1></Link>
                 <div onClick={toggleDropdownBurger} className={` text-xl flex items-center z-40 cursor-pointer transition-all ${dropdownOpen ? "text-black" : ''} relative `}>
-                    <p>Behandlingar</p>
+                    <p>- Behandlingar</p>
                     <div className="w-[18px] ml-1 pt-1">
                         <Image className={`w-full h-auto pb-0 ${dropDownBurger && 'rotate-180'}`} src={arrowBlack} alt="arrow" />
 
@@ -118,7 +118,7 @@ const Navbar = () => {
                         </Link>)
                     }
                 </div>
-                {navItems.map((item, index) => <Link onClick={closeMenu} key={index} className="text-xl z-40 relative " href={item.link}>{item.title}</Link>)}
+                {navItems.map((item, index) => <Link onClick={closeMenu} key={index} className="text-xl z-40 relative " href={item.link}>- {item.title}</Link>)}
                 <div className="w-full mt-10">
                     <BookButton text="BOKA TID" buttonStyle="text-lg py-[10px] w-full  shadow-lg" />
                 </div>
