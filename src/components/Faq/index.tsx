@@ -50,7 +50,7 @@ const Faq = ({ title, questions, dark }: FaqProps) => {
     return (
         <main id="faqComponent" className={cn(
             "bg-neutral-100 py-24 px-8 pb-28 text-pretty font-nunito",
-            dark && 'bg-bluegray/85'
+            dark && 'bg-bluegray'
             )}>
             <section className="content flex flex-col items-center">
                 <div className={cn(
@@ -58,7 +58,7 @@ const Faq = ({ title, questions, dark }: FaqProps) => {
                     dark && 'text-neutral-100'
                     )}>
                     <h3 className=" text-[20px]">FAQ</h3>
-                    <h2 className="text-5xl font-bold mx-2 my-5 text-black">Vanliga frågor om {title}</h2>
+                    <h2 className="text-5xl font-bold mx-2 my-5 text-neutral-400">Vanliga frågor om {title}</h2>
                     <p className="text-lg my-10"></p>
                 </div>
                 {questions.map((q) => (

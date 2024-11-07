@@ -20,13 +20,13 @@ const GetInTouch = () => {
             <h2 className="text-center text-3xl md:text-4xl lg:text-5xl font-nunito font-semibold mt-16 mb-10">Välkommen att höra av dig!</h2>
             <div className="flex justify-center mt-10 text-xl ">
                 <button onClick={() => changeCity('tranås')} className={cn(
-                    'px-10 py-1 border-l-2 border-r-2 border-t-2 border-bluegray rounded-t-lg flex gap-2 items-center',
+                    'px-4 py-1 border-l-2 border-r-2 border-t-2 border-bluegray rounded-t-lg flex gap-2 items-center',
                     city === 'tranås' && 'font-bold  bg-bluegray text-neutral-100'
                 )}>
                     {city === 'tranås' ? <Image className="w-[22px]" src={toothWhite} alt='logo' /> : <Image className="w-[22px]" src={toothBlack} alt='logo' />}
                     Tranås</button>
                 <button onClick={() => changeCity('norrköping')} className={cn(
-                    'px-10  border-r-2 border-t-2 border-bluegray rounded-t-lg flex gap-2 items-center',
+                    'px-4  border-r-2 border-t-2 border-bluegray rounded-t-lg flex gap-2 items-center',
                     city === 'norrköping' && 'font-bold  bg-bluegray text-neutral-100'
                 )}>
                     {city === 'norrköping' ? <Image className="w-[22px]" src={toothWhite} alt='logo' /> : <Image className="w-[22px]" src={toothBlack} alt='logo' />}

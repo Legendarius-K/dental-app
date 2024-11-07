@@ -3,7 +3,7 @@
 const ImplantsInfo = () => {
     return (
         <>
-            <section className="font-sans flex flex-col items-center gap-10 w-full bg-darkbluegray py-28 px-5">
+            <section className="font-sans flex flex-col items-center gap-10 w-full bg-bluegray py-28 px-5">
                 <div className=" max-w-[800px] flex flex-col gap-10">
                     <div>
                         <h3 className="text-2xl md:text-4xl font-nunito font-semibold text-left text-neutral-100 mb-2 md:-ml-6">Tecken på att du kan behöva tandimplantat</h3>
