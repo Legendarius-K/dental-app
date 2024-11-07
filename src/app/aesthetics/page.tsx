@@ -2,7 +2,7 @@ import BookButton from "@/components/BookButton";
 import HeroAesthetics from "@/components/Heroes/HeroAesthetics";
 import { contact } from "@/utils/data";
 import Image from "next/image";
-import braces from '../../../public/images/braces.png'
+import aesthetic from "../../../public/images/aesthetic-fall.png";
 import AestheticsInfo from "@/components/AestheticsInfo";
 import TimeToVisit from "@/components/TimeToVisit";
 
@@ -64,7 +64,7 @@ export default function Aesthetics() {
               <div className="md:w-1/2 w-full">
                 <Image
                   className="w-full h-auto rounded"
-                  src={braces}
+                  src={aesthetic}
                   alt="estetisk tandvård"
                 />
               </div>
