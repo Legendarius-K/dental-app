@@ -6,8 +6,6 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
 
-    const heroUnderline: string = "relative before:content-[''] before:absolute before:w-full before:h-[2px] before:bg-mainblue md:before:bottom-4 before:bottom-3 before:left-0 before:translate-y-1"
-
     return (
         <section
             className="relative w-full h-[700px] max-h-screen bg-cover bg-center text-neutral-100 font-sans"
