@@ -10,7 +10,7 @@ import Button from "../Button";
 
 
 interface FormData {
-  name: string;
+  name: string; 
   surname: string;
   email: string;
   phoneNumber?: string;
@@ -18,7 +18,7 @@ interface FormData {
   message: string;
   terms: boolean;
   gRecaptchaToken: string;
-}
+};
 
 export function Home2() {
   return (
