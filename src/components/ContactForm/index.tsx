@@ -26,7 +26,7 @@ export function Home2() {
       <HomeInside />
     </GoogleCaptchaWrapper>
   );
-}
+};
 
 function HomeInside() {
   const { executeRecaptcha } = useGoogleReCaptcha();
