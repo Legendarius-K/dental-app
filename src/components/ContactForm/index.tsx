@@ -69,7 +69,7 @@ function HomeInside() {
     } catch (error) {
       console.log("Form submission error:", error);
       setNotification("Form submission error");
-    }
+    };
   };
 
  
