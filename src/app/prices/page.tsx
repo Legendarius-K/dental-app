@@ -14,10 +14,10 @@ const prices = () => {
             <PriceMap />
             <Payments />
             <PriceList />
-            <section className="flex flex-col md:flex-row ">
-                <RingUs />
+            {/* <section className="flex flex-col md:flex-row ">
+                <RingUs /> */}
                 <ContactForm />
-            </section>
+            {/* </section> */}
 
 
         </>
