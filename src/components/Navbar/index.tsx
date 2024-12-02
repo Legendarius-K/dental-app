@@ -15,7 +15,7 @@ import BookButton from "../BookButton";
 import Hamburger from 'hamburger-react'
 import logoWhite from '../../../public/images/TryggTandvård_logo2_vit.png'
 import logoBlack from '../../../public/images/TryggTandvård_logo2_svart.png'
-import logoNew from '../../../public/images/TryggTandvård_logo_utan bakgrund.png'
+import logoNew from '../../../public/images/TryggTandvård_logo_utan bakgrund.png' 
 
 
 const Navbar = () => {
