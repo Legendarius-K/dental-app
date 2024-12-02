@@ -15,6 +15,7 @@ import BookButton from "../BookButton";
 import Hamburger from 'hamburger-react'
 import logoWhite from '../../../public/images/TryggTandvård_logo2_vit.png'
 import logoBlack from '../../../public/images/TryggTandvård_logo2_svart.png'
+import logoNew from '../../../public/images/TryggTandvård_logo_utan bakgrund.png'
 
 
 const Navbar = () => {
@@ -77,12 +78,12 @@ const Navbar = () => {
             {!dropdownOpen && (
               <Image
                 className="w-[190px] md:w-[240px]"
-                src={logoWhite}
+                src={logoNew}
                 alt="logo"
               />
             )}
             {dropdownOpen && (
-              <Image className="w-[240px]" src={logoBlack} alt="logo" />
+              <Image className="w-[240px]" src={logoNew} alt="logo" />
             )}
           </h1>
         </Link>
