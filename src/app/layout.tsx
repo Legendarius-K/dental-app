@@ -16,8 +16,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-    title: "Tand Trygg",
-    description: "Din lokala tandläkare i Tranås",
+  title: "Trygg Tandvård - Din lokala tandläkare i Tranås",
+  description: "På Trygg Tandvård får du proffessionell och trygg tandvård för hela familjen. Vår moderna klinik finns mitt i Tranås. Välkommen att boka tid.",
 };
 
 export default function RootLayout({
