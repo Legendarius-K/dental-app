@@ -2,15 +2,15 @@ export const contact = {
     adress: 'Storgatan 41',
     zipCode: '573 32 Tranås',
     phone: '070-12 345 678',
-    email: 'info@tandtrygg.se'
+    email: 'info@tryggtandvard.se'
 }
 
 export const contactNk = {
-    adress: 'Repslagaregatan 30',
-    zipCode: '602 45 Norrköping',
-    phone: '070-12 345 678',
-    email: 'info@sdm.se'
-}
+  adress: "Repslagaregatan 30",
+  zipCode: "602 45 Norrköping",
+  phone: "011-10 40 11",
+  email: "sdm-center@hotmail.com",
+};
 
 export const treatments = [
     {
@@ -23,7 +23,7 @@ export const treatments = [
     },
     {
         title: "Barntandvård",
-        info: "Tandvård för barn och ungdomar är kostnadsfri."
+        info: "Tandvård för barn och ungdomar."
     },
     {
         title: "Basundersökning",
@@ -31,7 +31,7 @@ export const treatments = [
     },
     {
         title: "Bettskenor",
-        info: "Vi utför bettfysiologiska behandlingar på Aqua Dental."
+        info: "Vi utför bettfysiologiska behandlingar på Trygg Tandvård."
     },
     {
         title: "Borttagning av amalgam",
@@ -87,7 +87,7 @@ export const treatments = [
     },
     {
         title: "Lagningar",
-        info: "Vi på Aqua Dental kan hjälpa dig laga skadade tänder."
+        info: "Vi på Trygg Tandvård kan hjälpa dig laga skadade tänder."
     },
     {
         title: "Lasertandvård",
@@ -102,12 +102,8 @@ export const treatments = [
         info: "Narkos hos tandläkare passar dig som lider av tandvårdsrädsla."
     },
     {
-        title: "Onlinetandläkaren",
-        info: "Träffa en tandläkare direkt i mobilen."
-    },
-    {
         title: "Operation av en visdomstand",
-        info: "Vi på Aqua Dental erbjuder operation av en visdomstand."
+        info: "Vi på Trygg Tandvård erbjuder operation av en visdomstand."
     },
     {
         title: "Orofacial medicin",
@@ -167,7 +163,7 @@ export const treatments = [
     },
     {
         title: "Tandreglering",
-        info: "Aqua Dental har ett brett utbud av tandregleringsmetoder."
+        info: "Trygg Tandvård har ett brett utbud av tandregleringsmetoder."
     },
     {
         title: "Tandröntgen",
@@ -191,7 +187,7 @@ export const treatments = [
     },
     {
         title: "Titthålskirurgi",
-        info: "Aqua Dental erbjuder datorstödd titthålskirurgi för tandimplantat."
+        info: "Trygg Tandvård erbjuder datorstödd titthålskirurgi för tandimplantat."
     },
 ];
 

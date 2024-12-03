@@ -13,6 +13,7 @@ import arrowWhite from "../../../public/images/nav-arrow-white.svg"
 import Image from "next/image";
 import BookButton from "../BookButton";
 import Hamburger from 'hamburger-react'
+import { motion } from "framer-motion";
 
 
 const Navbar = () => {
@@ -63,7 +64,7 @@ const Navbar = () => {
     return (
         <nav className={` fixed top-0 left-0 z-40 w-full py-4 flex justify-between items-center transition-all px-4 h-[56px] bg-black bg-opacity-60 ${dropdownOpen ? "text-textmain" : 'text-textwhite'}`}>
             <div onClick={closeMenu} className={`OVERLAY fixed top-0 left-0 bg-black opacity-40 w-full h-screen ${dropdownOpen || isOpen ? '' : 'hidden'}`}></div>
-            <Link href={'/'}><h1 className={`relative pl-10 md:pl-0 z-20 text-lg md:text-xl font-semibold  ${dropdownOpen ? "text-textmain" : ''}`}>Tand Trygg</h1></Link>
+            <Link href={'/'}><h1 className={`relative pl-10 md:pl-0 z-20 text-lg md:text-xl font-semibold  ${dropdownOpen ? "text-textmain" : ''}`}>Trygg Tandvård</h1></Link>
             <div className="gap-5 lg:gap-10 hidden md:flex">
                 <div onClick={toggleDropdown} className={`flex items-center z-40 cursor-pointer transition-all ${dropdownOpen ? "text-textmain before:bg-mainblue before:origin-center before:h-[1px] before:w-[55%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-200 after:absolute after:bg-mainblue after:origin-center after:h-[1px] after:w-[55%] after:bottom-0 after:right-[50%]" : ''} relative hover:cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-200 before:absolute before:bg-mainblue before:origin-center before:h-[1px] before:w-0 hover:before:w-[55%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-200 after:absolute after:bg-mainblue after:origin-center after:h-[1px] after:w-0 hover:after:w-[55%] after:bottom-0 after:right-[50%]`}>
                     <p>Behandlingar</p>
