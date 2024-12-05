@@ -72,7 +72,7 @@ export default function Aesthetics() {
           </div>
         </main>
         <AestheticsInfo />
-        <TimeToVisit background="bg-lightaccent" />
+        <TimeToVisit background="bg-textwhite" />
       </>
     );
 };

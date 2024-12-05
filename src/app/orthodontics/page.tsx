@@ -72,7 +72,7 @@ export default function Orto() {
       </main>
 
       <OrtoInfo />
-      <TimeToVisit background="bg-lightaccent" />
+      <TimeToVisit background="bg-textwhite" />
     </>
   );
 }

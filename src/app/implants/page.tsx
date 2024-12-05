@@ -33,8 +33,8 @@ const Implants = () => {
                 </div>
             </main>
             <ImplantsInfo />
-            <Faq questions={implantQuestions} title="implantat" dark={true}/>
-            <TimeToVisit background="bg-lightaccent" />
+            {/* <Faq questions={implantQuestions} title="implantat" dark={true}/> */}
+            <TimeToVisit background="bg-textwhite" />
         </>
     );
 };

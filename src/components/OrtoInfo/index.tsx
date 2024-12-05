@@ -29,7 +29,7 @@ const OrtoInfo = () => {
           </div>
         </div>
       </section>
-      <section className="font-sans flex flex-col items-center gap-10 w-full bg-neutral-100 py-20 px-5">
+      {/* <section className="font-sans flex flex-col items-center gap-10 w-full bg-neutral-100 py-20 px-5">
         <div className="max-w-[800px] flex flex-col gap-10">
           <div>
             <h3 className="text-2xl md:text-3xl font-nunito font-semibold text-left text-bluegray mb-2 md:-ml-6">
@@ -153,7 +153,7 @@ const OrtoInfo = () => {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 };

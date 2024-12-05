@@ -90,21 +90,29 @@ function HomeInside() {
               className="flex items-center gap-4 text-lg"
             >
               <Mail fill="gainsboro" size={25} />
-              {contact.email}
+              <p className=" hover:underline decoration-darkblue">
+                {contact.email}
+              </p>
             </a>
             <a
               href="tel:070123456789" //OBS ÄNDRA NUMMER
               className="flex items-center gap-4 text-lg"
             >
               <Phone fill="gainsboro" size={25} />
-              {contact.phone}
+              <p className=" hover:underline decoration-darkblue">
+                {contact.phone}
+              </p>
             </a>
             <div className="flex items-center gap-4 text-lg">
               <MapPin fill="gainsboro" size={27} />
-              <div className="flex flex-col">
+              <a
+                href="https://maps.app.goo.gl/Lyto7Bm2RnJwwJw86"
+                target="blank"
+                className="flex flex-col hover:underline decoration-darkblue"
+              >
                 <p>{contact.adress}</p>
                 <p>{contact.zipCode}</p>
-              </div>
+              </a>
             </div>
           </div>
         </div>

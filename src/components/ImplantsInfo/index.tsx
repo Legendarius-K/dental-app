@@ -17,7 +17,7 @@ const ImplantsInfo = () => {
                     </div>
                 </div>
             </section>
-            <section className="font-sans flex flex-col items-center gap-10 w-full bg-neutral-100 py-28 px-5">
+            {/* <section className="font-sans flex flex-col items-center gap-10 w-full bg-neutral-100 py-28 px-5">
                 <div className=" max-w-[800px] flex flex-col gap-10">
 
                     <div>
@@ -63,7 +63,7 @@ const ImplantsInfo = () => {
                         <p className="border-l-[1px] border-neutral-300 pl-3 pt-3">På <span className="font-bold">Trygg Tandvård i Tranås</span> erbjuder vi dessutom gedigna garantier för att du ska känna dig trygg med din behandling. Vi erbjuder upp till fem års garanti på fast protetik och implantat samt ett års garanti på avtagbar protetik, med tre månaders eftervård inkluderad.</p>
                     </div>
                 </div>
-            </section>
+            </section> */}
         </>
     )
 };

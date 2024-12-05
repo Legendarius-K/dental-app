@@ -8,7 +8,7 @@ import { contact } from "@/utils/data";
 const HeroAllTreatments = () => {
     return (
       <section
-        className="relative w-full h-[650px] max-h-screen bg-cover bg-center text-neutral-100 font-sans"
+        className="relative w-full h-[620px] max-h-screen bg-cover bg-center text-neutral-100 font-sans"
         style={{ backgroundImage: "url('/images/hero-all-treatments.png')" }}
       >
         <div className="absolute inset-0 bg-black opacity-40 z-10"></div>
