@@ -34,18 +34,18 @@ export const projects = [
         title: "Akut tandvård",
         image:
             "/images/emergency.png",
-        link: "https://meta.com",
+        link: "/emergency",
     },
     {
         title: "Tandimplantat",
         image:
             "/images/orthodontics.png",
-        link: "https://amazon.com",
+        link: "/implants",
     },
     {
         title: "Estetisk tandvård",
         image:
             "/images/aesthetic.png",
-        link: "https://microsoft.com",
+        link: "/aesthetics",
     },
 ];

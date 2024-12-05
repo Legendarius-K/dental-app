@@ -15,7 +15,10 @@ const config: Config = {
         lightblue: "#ADEBE9",
         extralightblue: "#D8FFFD",
         darkblue: "#4DBEC4",
-        bluegray: "#36454D",
+        bluegray: "#3D434D",
+        // bluegray: "#373D48",
+        // bluegray: "#37404A",
+        // bluegray: "#36454D",
         darkbluegray: "#222C30",
         lightbluegray: "#455761",
         accent: "#B8725F",
@@ -26,7 +29,7 @@ const config: Config = {
       fontFamily: {
         sans: ["Poppins", "sans-serif"],
         playfair: ["Playfair+Display", "serif"],
-        nunito: ["Nunito", "sans-serif"]
+        nunito: ["Nunito", "sans-serif"],
       },
     },
   },

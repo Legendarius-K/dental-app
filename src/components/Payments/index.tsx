@@ -11,7 +11,7 @@ const Payments = () => {
 
       <div className="basis-1/2 p-8 flex flex-col items-center justify-center py-36">
         <h2 className="text-textmain text-3xl md:text-4xl lg:text-5xl mb-8 font-semibold text-center ">
-          Alltid hos Tand Trygg
+          Alltid hos Trygg Tandvård
         </h2>
         <div className="text-white font-sans lg:pt-4 sm:text-lg lg:text-xl flex flex-col gap-3">
           <p className="">

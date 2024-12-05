@@ -7,7 +7,7 @@ import ContactButton from "../../ContactButton";
 const HeroAesthetics = () => {
     return (
       <section
-        className="relative w-full h-[600px] max-h-screen bg-cover bg-center text-neutral-100 font-sans"
+        className="relative w-full h-[640px] max-h-screen bg-cover bg-center text-neutral-100 font-sans"
         style={{ backgroundImage: "url('/images/hero-aesthetics.png')" }}
       >
         <div className="absolute inset-0 bg-black opacity-40 z-10"></div>

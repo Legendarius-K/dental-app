@@ -10,7 +10,7 @@ export default function AllTreatments() {
             <section className="flex justify-center flex-wrap p-5 py-16 pb-28">
                 {treatments?.map((treatment, index) => <TreatmentCard key={index} title={treatment.title} info={treatment.info} />)}
             </section>
-            <TimeToVisit background="bg-lightaccent" />
+            <TimeToVisit background="bg-textwhite" />
         </>
     )
 };
