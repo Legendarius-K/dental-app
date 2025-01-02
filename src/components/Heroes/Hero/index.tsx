@@ -12,7 +12,7 @@ const Hero = () => {
         style={{ backgroundImage: "url('/images/niceteeth.jpg')" }}
       >
         <div className="absolute inset-0 bg-black opacity-40 z-10"></div>
-        <div className="absolute top-16 left-3 text-[8px] md:text-[10px] text-neutral-200 z-30">
+        <div className="absolute top-16 right-3 text-[8px] md:text-[10px] text-neutral-200 z-30">
           Allmäntandvård | Specialisttandvård | Tandreglering
         </div>
         <div className="ml-6 mr-6 md:ml-[80px] xl:ml-[130px]">
