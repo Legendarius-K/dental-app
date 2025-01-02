@@ -168,7 +168,7 @@ const Navbar = () => {
               Tand Trygg
             </h1> */}
             <Image
-              className="absolute right-2 top-2 w-[220px]"
+              className="absolute right-4 top-2 w-[220px]"
               src={logoBlack}
               alt="logo"
             />
