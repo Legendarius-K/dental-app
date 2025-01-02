@@ -116,7 +116,7 @@ const Navbar = () => {
 
     return (
       <nav
-        className={` fixed top-0 left-0 z-40 w-full py-4 flex justify-between items-center transition-all px-4 h-[56px] bg-black bg-opacity-60 ${dropdownOpen ? "text-textmain" : "text-textwhite"}`}
+        className={` fixed top-0 left-0 z-40 w-full py-4 flex justify-between items-center transition-all px-4 h-[56px] bg-black bg-opacity-70 ${dropdownOpen ? "text-textmain" : "text-textwhite"}`}
       >
         <div
           onClick={closeMenu}
@@ -196,7 +196,7 @@ const Navbar = () => {
         <div className={` ${isOpen && "hidden"}`}>
           <BookButton
             text="BOKA TID"
-            buttonStyle="text-sm py-[7px] w-[90px] shadow-lg"
+            buttonStyle="text-sm py-[7px] w-[90px] shadow-lg md:font-semibold"
           />
         </div>
         <div className="absolute z-30 left-1 top-[4px] md:hidden">
