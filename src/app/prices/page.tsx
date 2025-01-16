@@ -12,9 +12,9 @@ const prices = () => {
       <HeroPrices />
 
       <PriceMap />
-      <Payments />
+      {/* <Payments /> */}
       <PricesInfo />
-      <PriceList />
+      {/* <PriceList /> */}
       <ContactForm />
     </>
   );

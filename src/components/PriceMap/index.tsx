@@ -4,50 +4,39 @@ import BookButton from "../BookButton";
 
 const PriceMap = () => {
   return (
-    <section className="flex flex-col md:flex-row bg-textwhite py-12 pb-20 md:pb-16 md:py-16 lg:py-24 lg:pb-16">
+    <section className="flex flex-col md:flex-row bg-textwhite py-12 pb-0 md:pb-16 md:py-16 lg:py-24 lg:pb-16">
       <div className="w-full md:w-1/2  flex flex-col items-center justify-center px-4 md:px-8 pb-10">
         <h2 className="font-semibold text-2xl md:text-3xl mb-4 md:mb-8 text-center ">
           Det här får du hos Trygg Tandvård
         </h2>
         <div>
-          <p className="text-black font-sans lg:pt-4 sm:text-md  lg:max-w-[550px] text-justify my-3">
-            <span className="font-bold text-accent hover:text-darkblue">
-              Prisvärd tandvård {" "}
-            </span>
+          <p className="text-black font-sans lg:pt-4 sm:text-md  lg:max-w-[550px] my-3">
+            <span className="font-bold">Prisvärd tandvård </span>
             innebär olika saker för olika personer, men hos oss betyder det
             kvalitet och hållbarhet. Vi fokuserar på behandlingar som är
             långsiktiga och förebyggande för att minska risken för
             komplikationer och onödiga återbesök.
           </p>
-          <p className="text-black font-sans lg:pt-4 sm:text-md  lg:max-w-[550px] text-justify my-3">
-            <span className="font-bold text-accent hover:text-darkblue">
-              Vårt löfte
-            </span>{" "}
-            till dig är att alltid sätta trygghet, kvalitet och patientsäkerhet
-            först. Våra erfarna tandläkare har gedigen kompetens och arbetar för
-            att ge dig den bästa vården. Vi är dessutom tillgängliga året runt
-            och tar inte ut några extra avgifter för kvällar och helger.
+          <p className="text-black font-sans lg:pt-4 sm:text-md  lg:max-w-[550px] my-3">
+            <span className="font-bold">Vårt löfte</span> till dig är att alltid
+            sätta trygghet, kvalitet och patientsäkerhet först. Våra erfarna
+            tandläkare har gedigen kompetens och arbetar för att ge dig den
+            bästa vården. Vi är dessutom tillgängliga året runt och tar inte ut
+            några extra avgifter för kvällar och helger.
           </p>
-          <p className="text-black font-sans lg:pt-4 sm:text-md  lg:max-w-[550px] text-justify my-3">
+          <p className="text-black font-sans lg:pt-4 sm:text-md  lg:max-w-[550px] my-3">
             Vi tror på att tandvård ska vara
-            <span className="font-bold text-accent hover:text-darkblue">
-              {" "}
-              enkel
-            </span>{" "}
-            och
-            <span className="font-bold text-accent hover:text-darkblue">
-              {" "}
-              tillgänglig
-            </span>{" "}
-            för alla. Därför erbjuder vi flexibla bokningsalternativ och en
-            välkomnande miljö där du alltid kan känna dig trygg och
-            omhändertagen. Hos oss är ditt leende vår högsta prioritet.
+            <span className="font-bold"> enkel</span> och
+            <span className="font-bold "> tillgänglig</span> för alla. Därför
+            erbjuder vi flexibla bokningsalternativ och en välkomnande miljö där
+            du alltid kan känna dig trygg och omhändertagen. Hos oss är ditt
+            leende vår högsta prioritet.
           </p>
         </div>
       </div>
 
-      <div className="w-full md:w-1/2  md:border-l">
-        <h2 className="text-3xl bg-bluegray pl-6 text-textwhite py-2 font-nunito">
+      <div className="w-full md:w-1/2 md:border-l shadow-md rounded-xl bg-white pb-20 md:pb-0">
+        <h2 className="text-3xl pl-6 text-textwhite py-2 font-nunito rounded-tl-xl rounded-tr-xl bg-bluegray">
           Hitta en ledig tid
         </h2>
         <div className="w-4/5 font-sans flex flex-col gap-4 mt-8 pl-6">
