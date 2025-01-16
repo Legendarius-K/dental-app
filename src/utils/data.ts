@@ -1,7 +1,7 @@
 export const contact = {
     adress: 'Storgatan 41',
     zipCode: '573 32 Tranås',
-    phone: '070-12 345 678',
+    phone: '0140‑27 31 55',
     email: 'info@tryggtandvard.se'
 }
 
