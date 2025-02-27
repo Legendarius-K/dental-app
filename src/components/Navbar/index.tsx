@@ -213,7 +213,7 @@ const Navbar = () => {
         <div
           className={`z-20 fixed top-0 w-4/5 h-screen bg-neutral-100 transition-all text-neutral-800 px-10 py-3 flex flex-col gap-4 ${isOpen ? "left-0" : "-left-full"}`}
         >
-          <Link href={"/"}>
+          <Link onClick={closeMenu} href={"/"}>
             {/* <h1
               className={`text-right w-full z-40 text-xl md:text-2xl font-semibold mb-20`}
             >

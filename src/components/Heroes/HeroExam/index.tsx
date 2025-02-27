@@ -12,8 +12,8 @@ const HeroExam = () => {
       >
         <div className="absolute inset-0 bg-black opacity-30 z-10"></div>
         <div className="ml-6 mr-6 md:ml-[80px] xl:ml-[130px]">
-          <h1 className="relative z-20 text-5xl md:text-7xl max-w-[500px] pt-52 md:pt-[190px] font-nunito font-bold">
-            Om Trygg Tandvård
+          <h1 className="relative z-20 text-4xl md:text-7xl max-w-[500px] pt-52 md:pt-[190px] font-nunito font-bold">
+            Basundersökning
           </h1>
           <h2 className="relative z-20 md:text-lg max-w-[500px] pt-6 font-light">
             Basundersökning hos Trygg Tandvård – en snabb check för ett friskare

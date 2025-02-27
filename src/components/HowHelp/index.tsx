@@ -12,40 +12,34 @@ export function HowHelp() {
     );
 }
 export const projects = [
-    {
-        title: "Boka tid",
-        image:
-            "/images/clock.png",
-        link: "/", //bokningslänk
-    },
-    {
-        title: "Hitta oss",
-        image:
-            "/images/pin.png",
-        link: "/find_us",
-    },
-    {
-        title: "Priser",
-        image:
-            "/images/calculator.png",
-        link: "/prices",
-    },
-    {
-        title: "Akut tandvård",
-        image:
-            "/images/emergency.png",
-        link: "/emergency",
-    },
-    {
-        title: "Tandimplantat",
-        image:
-            "/images/orthodontics.png",
-        link: "/implants",
-    },
-    {
-        title: "Estetisk tandvård",
-        image:
-            "/images/aesthetic.png",
-        link: "/aesthetics",
-    },
+  {
+    title: "Boka tid",
+    image: "/images/clock.png",
+    link: "https://www.muntra.com/trygg-tandvard/c/6270?language=sv",
+  },
+  {
+    title: "Hitta oss",
+    image: "/images/pin.png",
+    link: "/find_us",
+  },
+  {
+    title: "Priser",
+    image: "/images/calculator.png",
+    link: "/prices",
+  },
+  {
+    title: "Akut tandvård",
+    image: "/images/emergency.png",
+    link: "/emergency",
+  },
+  {
+    title: "Tandimplantat",
+    image: "/images/orthodontics.png",
+    link: "/implants",
+  },
+  {
+    title: "Estetisk tandvård",
+    image: "/images/aesthetic.png",
+    link: "/aesthetics",
+  },
 ];

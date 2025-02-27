@@ -57,6 +57,7 @@ const PriceMap = () => {
             buttonStyle="text-lg md:text-xl py-2 md:py-3 w-[200px] px-3 font-medium"
           />
           <BookButton
+            hrefNorrköping
             text="NORRKÖPING"
             buttonStyle="text-lg md:text-xl py-2 md:py-3 w-[200px] px-3 font-medium"
           />

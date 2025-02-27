@@ -95,7 +95,7 @@ function HomeInside() {
               </p>
             </a>
             <a
-              href="tel:070123456789" //OBS ÄNDRA NUMMER
+              href={`tel:${contact.phone}`} //OBS ÄNDRA NUMMER
               className="flex items-center gap-4 text-lg"
             >
               <Phone fill="gainsboro" size={25} />
