@@ -248,18 +248,32 @@ const ContacthtmlForm = () => {
         </div>
       </div>
     </section>
-    <form ref={form} onSubmit={sendEmail} className="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
+    <form ref={form} onSubmit={sendEmail} className="w-full lg:w-1/2 px-2 md:px-6 pb-16 max-w-[800px]">
       <div className="mb-4">
-        <label className="block text-gray-700 text-sm font-bold mb-2">Name</label>
+        <label className="mb-1 block text-base font-medium text-black p1 ">Name</label>
         <input type="text" name="user_name" className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" required />
       </div>
       <div className="mb-4">
-        <label className="block text-gray-700 text-sm font-bold mb-2">Email</label>
+        <label className="mb-1 block text-base font-medium text-black p1 ">Efternam</label>
+        <input type="text" name="user_surname" className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" required />
+      </div>
+      <div className="mb-4">
+        <label className="mb-1 block text-base font-medium text-black p1 ">Email</label>
         <input type="email" name="user_email" className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" required />
       </div>
       <div className="mb-4">
-        <label className="block text-gray-700 text-sm font-bold mb-2">Message</label>
-        <textarea name="message" className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" required></textarea>
+        <label className="mb-1 block text-base font-medium text-black p1 ">Telefonnummer</label>
+        <input type="email" name="user_phone" className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" required />
+      </div>
+      <div className="mb-4">
+        <label className="mb-1 block text-base font-medium text-black p1 ">Message</label>
+        <textarea
+                  rows={4}
+                  name="message"
+                  className={`form-control w-full border-2  rounded-md bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none hover:border-mainblue focus:border-mainblue focus:shadow-md p2 `}
+                  placeholder="Skriv ditt meddelandet"
+                  required
+                />
       </div>
       <div className="flex flex-col items-center gap-4">
         <ReCAPTCHA 
