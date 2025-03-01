@@ -94,29 +94,29 @@ const ContacthtmlForm = () => {
       </div>
       </div>
       <div className="mb-4">
-                <label
-                  htmlFor="reasonForContact"
-                  className="mb-1 block text-base font-medium text-black p1"
-                  id="reasonForContact"
-                >
-                  Vad gäller ditt ärende?
-                </label>
-                <select
-                  name="user_reasons"
-                  className="form-control w-full border-b-2  bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none hover:border-mainblue focus:border-mainblue focus:shadow-md p2"
-                >
-                  <option value="" disabled selected>
-                    Ärende
-                  </option>
-                  <option value="">Allmän information</option>
-                  <option value="bokning">Boka tid</option>
-                  <option value="avbokning">Avbokning/Ombokning</option>
-                  <option value="behandling">Frågor om behandling</option>
-                  <option value="Feedback">Feedback</option>
-                  <option value="övrigt">Övrigt</option>
-                </select>
-                
-              </div>
+        <label
+          htmlFor="reasonForContact"
+          className="mb-1 block text-base font-medium text-black p1"
+          id="reasonForContact"
+        >
+          Vad gäller ditt ärende?
+        </label>
+        <select
+          name="user_reasons"
+          className="form-control w-full border-b-2  bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none hover:border-mainblue focus:border-mainblue focus:shadow-md p2"
+        >
+          <option value="" disabled selected>
+            Ärende
+          </option>
+          <option value="">Allmän information</option>
+          <option value="bokning">Boka tid</option>
+          <option value="avbokning">Avbokning/Ombokning</option>
+          <option value="behandling">Frågor om behandling</option>
+          <option value="Feedback">Feedback</option>
+          <option value="övrigt">Övrigt</option>
+        </select>
+        
+      </div>
     
       <div className="mb-4">
         <label className="mb-1 block text-base font-medium text-black p1 ">Message</label>
