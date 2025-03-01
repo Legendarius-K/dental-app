@@ -1,33 +1,78 @@
-"use client"
+"use client";
 
-import React, { useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
-import ReCAPTCHA from "react-google-recaptcha";
-import { Mail, MapPin, Phone } from "lucide-react";
+import React, { useState } from "react";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import axios from "axios";
+import GoogleCaptchaWrapper from "@/app/google-captcha-wrapper";
+import { useForm } from "react-hook-form";
+import Button from "../Button";
 import { contact } from "@/utils/data";
-const ContacthtmlForm = () => {
-  const [capVal, setCapVal] = useState(null);
-  const [status, setStatus] = useState("Send");
-  const form = useRef();
+import { Mail, MapPin, Phone } from "lucide-react";
 
-  const sendEmail = async (e) => {
-    e.preventDefault();
-    setStatus("Sending...");
+interface FormData {
+  name: string;
+  surname: string;
+  email: string;
+  phoneNumber?: string;
+  reasonForContact?: string;
+  message: string;
+  terms: boolean;
+  gRecaptchaToken: string;
+}
 
+export function Home2() {
+  return (
+    <GoogleCaptchaWrapper>
+      <HomeInside />
+    </GoogleCaptchaWrapper>
+  );
+}
+
+function HomeInside() {
+  const { executeRecaptcha } = useGoogleReCaptcha();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormData>();
+  const [notification, setNotification] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [showMessagePopup, setShowMessagePopup] = useState(false);
+
+  const onSubmit = async (data: FormData) => {
+    setIsLoading(true);
     try {
-      await emailjs.sendForm('service_zeosaij', 'template_hc1ra2t', form.current, {
-        publicKey: 'MUrXdjL-6yZpi0TUk',
-      });
-      setStatus("Message Sent!");
-      setTimeout(() => setStatus("Send"), 3000); // Reset after 3 seconds
+      if (executeRecaptcha) {
+        const gRecaptchaToken = await executeRecaptcha("enquiryFormSubmit");
+        await submitEnquiryForm({ ...data, gRecaptchaToken });
+      }
     } catch (error) {
-      console.error('FAILED...', error.text);
-      setStatus("Send");
+      console.log("Recaptcha execution error:", error);
+      setNotification("Recaptcha execution error");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const submitEnquiryForm = async (formData: FormData) => {
+    try {
+      const response = await axios.post("/api/contactFormSubmit", formData);
+
+      if (response.data.success) {
+        setNotification(`Success with score: ${response.data.score}`);
+        await axios.post("/api/email", formData);
+        setShowMessagePopup(true);
+        setTimeout(() => setShowMessagePopup(false), 5000);
+      } else {
+        setNotification(`Failure with score: ${response.data.score}`);
+      }
+    } catch (error) {
+      console.log("Form submission error:", error);
+      setNotification("Form submission error");
     }
   };
 
   return (
-    <>
     <section className="flex flex-col justify-center items-center lg:flex-row bg-textwhite pt-10">
       <div className="flex flex-col lg:flex-row items-center w-full max-w-[1700px]">
         <div className="flex justify-center self-start pt-10 w-full lg:w-1/2 bg-textwhite">
@@ -81,7 +126,7 @@ const ContacthtmlForm = () => {
           <main className="mt-5">
             <form
               id="contactForm"
-              
+              onSubmit={handleSubmit(onSubmit)}
               className="bg-pt-gray2 p-4"
             >
               <div className="flex gap-3">
@@ -91,16 +136,24 @@ const ContacthtmlForm = () => {
                     className="mb-1 block text-base font-medium text-black p1 font-bold"
                   >
                     Namn
-                    
+                    {
+                      <span
+                        className={`ml-1 ${errors.name ? "text-red-500" : "text-black"}`}
+                      >
+                        *
+                      </span>
+                    }
                   </label>
                   <input
                     type="text"
-                    
-                    className={`rounded form-control w-full border-b-2 bg-white py-3 px-6 text-base font-medium  outline-none hover:border-mainblue focus:border-mainblue focus:shadow-md p2 `}
+                    {...register("name", { required: true })}
+                    className={`rounded form-control w-full border-b-2 bg-white py-3 px-6 text-base font-medium  outline-none hover:border-mainblue focus:border-mainblue focus:shadow-md p2 ${errors.name ? "border-red-500" : ""}`}
                     placeholder="Namn"
                   />
 
-                  
+                  {errors.name && (
+                    <span className="text-red-500">required</span>
+                  )}
                 </div>
                 <div className="wrapperSurname mb-5 basis-1/2">
                   <label
@@ -108,15 +161,23 @@ const ContacthtmlForm = () => {
                     className="mb-1 block text-base font-medium text-black p1"
                   >
                     Efternamn
-                    
+                    {
+                      <span
+                        className={`ml-1 ${errors.name ? "text-red-500" : "text-black"}`} //change surname??
+                      >
+                        *
+                      </span>
+                    }
                   </label>
                   <input
                     type="text"
-                    
-                    className={`form-control w-full border-b-2  bg-white py-3 px-6 text-base font-medium text-gray-700 hover:border-mainblue focus:border-mainblue outline-none focus:border-,ainblue focus:shadow-md p2 `}
+                    {...register("surname", { required: true })}
+                    className={`form-control w-full border-b-2  bg-white py-3 px-6 text-base font-medium text-gray-700 hover:border-mainblue focus:border-mainblue outline-none focus:border-,ainblue focus:shadow-md p2 ${errors.name ? "border-red-500" : ""}`}
                     placeholder="Efternamn"
                   />
-                  
+                  {errors.name && (
+                    <span className="text-red-500">required</span>
+                  )}
                 </div>
               </div>
 
@@ -127,15 +188,23 @@ const ContacthtmlForm = () => {
                     className="mb-1 block text-base font-medium text-black p1"
                   >
                     Email
-                    
+                    {
+                      <span
+                        className={`ml-1 ${errors.email ? "text-red-500" : "text-black"}`}
+                      >
+                        *
+                      </span>
+                    }
                   </label>
                   <input
                     type="email"
-                   
-                    className={`form-control w-full border-b-2  bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none hover:border-mainblue focus:border-mainblue focus:shadow-md p2 `}
+                    {...register("email", { required: true })}
+                    className={`form-control w-full border-b-2  bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none hover:border-mainblue focus:border-mainblue focus:shadow-md p2 ${errors.email ? "border-red-500" : ""}`}
                     placeholder="abc@gmail.com"
                   />
-                  
+                  {errors.email && (
+                    <span className="text-red-500">required</span>
+                  )}
                 </div>
                 <div className="wrapperPhoneNumber mb-5">
                   <label
@@ -147,7 +216,7 @@ const ContacthtmlForm = () => {
                   </label>
                   <input
                     type="tel"
-                    
+                    {...register("phoneNumber")}
                     className="form-control w-full border-b-2  bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none hover:border-mainblue focus:border-mainblue focus:shadow-md p2"
                     placeholder="070-XXX XXX"
                   />
@@ -162,7 +231,7 @@ const ContacthtmlForm = () => {
                   Vad gäller ditt ärende?
                 </label>
                 <select
-                  
+                  {...register("reasonForContact", { required: true })}
                   className="form-control w-full border-b-2  bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none hover:border-mainblue focus:border-mainblue focus:shadow-md p2"
                 >
                   <option value="" disabled selected>
@@ -175,7 +244,9 @@ const ContacthtmlForm = () => {
                   <option value="Feedback">Feedback</option>
                   <option value="övrigt">Övrigt</option>
                 </select>
-                
+                {errors.reasonForContact && (
+                  <span className="text-red-500">required</span>
+                )}
               </div>
 
               <div className="wrapperMessage mb-5">
@@ -185,15 +256,23 @@ const ContacthtmlForm = () => {
                   id="message"
                 >
                   Meddelande
-                  
+                  {
+                    <span
+                      className={`ml-1 ${errors.message ? "text-red-500" : "text-black"}`}
+                    >
+                      *
+                    </span>
+                  }
                 </label>
                 <textarea
                   rows={4}
-                  
-                  className={`form-control w-full border-2  rounded-md bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none hover:border-mainblue focus:border-mainblue focus:shadow-md p2 `}
+                  {...register("message", { required: true })}
+                  className={`form-control w-full border-2  rounded-md bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none hover:border-mainblue focus:border-mainblue focus:shadow-md p2 ${errors.message ? "border-red-500" : ""}`}
                   placeholder="Skriv ditt meddelandet"
                 />
-                
+                {errors.message && (
+                  <span className="text-red-500">required</span>
+                )}
               </div>
               <p className="p3 mb-5">
                 Sidan skyddas av reCAPTCHA som tillämpar Googles
@@ -218,7 +297,7 @@ const ContacthtmlForm = () => {
               <div className="wrapperTerms mb-5 form-check flex">
                 <input
                   type="checkbox"
-                 
+                  {...register("terms", { required: true })}
                   className="form-check-input cursor-pointer"
                 />
                 <label className="form-check-label ml-1">
@@ -228,7 +307,9 @@ const ContacthtmlForm = () => {
                   </a>
                   *
                 </label>
-                
+                {errors.terms && (
+                  <span className="text-red-500 ml-1">agreeToTerms</span>
+                )}
               </div>
 
               <div className="wrapperButton flex items-center relative">
@@ -240,42 +321,42 @@ const ContacthtmlForm = () => {
                     SKICKA
                   </span>
                 </button>
-                
-                
+                {showMessagePopup && (
+                  <div className="popup bg-[#63d285] text-pt-gray2  ml-3 absolute inset-y-0 left-[-13px] rounded-full button-text py-[15px] px-[32px] h-[48px] w-[303px] flex justify-center items-center text-nowrap">
+                    contactBtn
+                  </div>
+                )}
+                {isLoading && (
+                  <div className="loading-spinner ml-3">
+                    <svg
+                      className="animate-spin h-5 w-5 text-black"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                      ></circle>
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+                      ></path>
+                    </svg>
+                  </div>
+                )}
               </div>
             </form>
           </main>
         </div>
       </div>
     </section>
-    <form ref={form} onSubmit={sendEmail} className="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
-      <div className="mb-4">
-        <label className="block text-gray-700 text-sm font-bold mb-2">Name</label>
-        <input type="text" name="user_name" className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" required />
-      </div>
-      <div className="mb-4">
-        <label className="block text-gray-700 text-sm font-bold mb-2">Email</label>
-        <input type="email" name="user_email" className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" required />
-      </div>
-      <div className="mb-4">
-        <label className="block text-gray-700 text-sm font-bold mb-2">Message</label>
-        <textarea name="message" className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" required></textarea>
-      </div>
-      <div className="flex flex-col items-center gap-4">
-        <ReCAPTCHA 
-          sitekey="6LczTOYqAAAAADUaULeZhm-Puyo0BWuUU2pQmsSm"
-          onChange={val => setCapVal(val)}
-        />
-        <input 
-          disabled={!capVal || status === "Sending..."} 
-          type="submit" 
-          value={status} 
-          className={`bg-blue-500 text-white font-bold py-2 px-4 rounded-lg cursor-pointer transition-all ${!capVal || status === "Sending..." ? "opacity-50 cursor-not-allowed" : "hover:bg-blue-700"}`} 
-        />
-      </div>
-    </form>
-    </>
   );
-};
+}
 
-export default ContacthtmlForm;
+export default HomeInside;
