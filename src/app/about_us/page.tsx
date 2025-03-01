@@ -1,8 +1,7 @@
 import { AboutUs } from "@/components/AboutUs";
-import ContactForm from "@/components/ContactForm";
+
 import HeroAbout from "@/components/Heroes/HeroAbout";
-import RingUs from "@/components/RingUs";
-import StaffContainer from "@/components/StaffContainer";
+import NewContact from "@/components/NewContact";
 
 const about_us = () => {
   return (
@@ -11,8 +10,8 @@ const about_us = () => {
       <section className=" flex flex-col pt-20 justify-center">
         
           <AboutUs />
-          <ContactForm />
-        
+          
+          <NewContact />
       </section>
     </>
   );
