@@ -41,7 +41,7 @@ const ContacthtmlForm = () => {
         <textarea name="message" className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"></textarea>
       </div>
       <div className="flex justify-end">
-        <ReCAPTCHA sitekey="6LfIRg8qAAAAAHPIx4cCpBl9f-DsdK_4sjZvy43t"
+        <ReCAPTCHA sitekey="6LczTOYqAAAAADUaULeZhm-Puyo0BWuUU2pQmsSm"
         onChange={val=> setCapVal(val)}
         />
         <input disabled={!capVal} type="submit" value="Send" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg cursor-pointer" />
