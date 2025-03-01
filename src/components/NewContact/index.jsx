@@ -7,22 +7,22 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import { contact } from "@/utils/data";
 const ContacthtmlForm = () => {
   const [capVal, setCapVal] = useState(null);
-  const [status, setStatus] = useState("Send");
+  const [status, setStatus] = useState("Skicka");
   const form = useRef();
 
   const sendEmail = async (e) => {
     e.preventDefault();
-    setStatus("Sending...");
+    setStatus("Skickar...");
 
     try {
       await emailjs.sendForm('service_zeosaij', 'template_hc1ra2t', form.current, {
         publicKey: 'MUrXdjL-6yZpi0TUk',
       });
-      setStatus("Message Sent!");
-      setTimeout(() => setStatus("Send"), 3000); // Reset after 3 seconds
+      setStatus("Skickat!");
+      setTimeout(() => setStatus("Skicka"), 3000); 
     } catch (error) {
       console.error('FAILED...', error.text);
-      setStatus("Send");
+      setStatus("Skicka");
     }
   };
 
@@ -233,7 +233,7 @@ const ContacthtmlForm = () => {
 
               <div className="wrapperButton flex items-center relative">
                 <button
-                  className={`z-20 relative inline-flex items-center justify-start inline-block overflow-hidden transition-all bg-mainblue rounded-full hover:bg-darkblue group text-lg md:text-xl py-1 md:py-3 w-[200px] h-12 md:h-auto px-3 font-medium`}
+                  className={`z-20 relative inline-flex items-center justify-start overflow-hidden transition-all bg-mainblue rounded-full hover:bg-darkblue group text-lg md:text-xl py-1 md:py-3 w-[200px] h-12 md:h-auto px-3 font-medium`}
                 >
                   <span className="absolute inset-0 border-0 group-hover:border-[25px] ease-linear duration-100 transition-all border-darkblue rounded-full"></span>
                   <span className="relative w-full text-center text-neutral-800 transition-colors duration-200 ease-in-out group-hover:text-white">
@@ -249,7 +249,8 @@ const ContacthtmlForm = () => {
       </div>
     </section>
     <form ref={form} onSubmit={sendEmail} className="w-full lg:w-1/2 px-2 md:px-6 pb-16 max-w-[800px]">
-      <div className="mb-4">
+    <div className="flex gap-3 flex-grow-1">
+      <div className="mb-5 basis-1/2">
         <label className="mb-1 block text-base font-medium text-black p1 ">Name</label>
         <input type="text" name="user_name" className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" required />
       </div>
@@ -257,14 +258,41 @@ const ContacthtmlForm = () => {
         <label className="mb-1 block text-base font-medium text-black p1 ">Efternam</label>
         <input type="text" name="user_surname" className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" required />
       </div>
+    </div>
+    <div className="flex flex-col md:flex-row md:gap-3">
       <div className="mb-4">
         <label className="mb-1 block text-base font-medium text-black p1 ">Email</label>
         <input type="email" name="user_email" className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" required />
       </div>
       <div className="mb-4">
         <label className="mb-1 block text-base font-medium text-black p1 ">Telefonnummer</label>
-        <input type="email" name="user_phone" className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" required />
+        <input type="tel" name="user_phone" className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" required />
       </div>
+      <div className="mb-4">
+                <label
+                  htmlFor="reasonForContact"
+                  className="mb-1 block text-base font-medium text-black p1"
+                  id="reasonForContact"
+                >
+                  Vad gäller ditt ärende?
+                </label>
+                <select
+                  name="user_reasons"
+                  className="form-control w-full border-b-2  bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none hover:border-mainblue focus:border-mainblue focus:shadow-md p2"
+                >
+                  <option value="" disabled selected>
+                    Ärende
+                  </option>
+                  <option value="">Allmän information</option>
+                  <option value="bokning">Boka tid</option>
+                  <option value="avbokning">Avbokning/Ombokning</option>
+                  <option value="behandling">Frågor om behandling</option>
+                  <option value="Feedback">Feedback</option>
+                  <option value="övrigt">Övrigt</option>
+                </select>
+                
+              </div>
+    </div>
       <div className="mb-4">
         <label className="mb-1 block text-base font-medium text-black p1 ">Message</label>
         <textarea
@@ -277,14 +305,14 @@ const ContacthtmlForm = () => {
       </div>
       <div className="flex flex-col items-center gap-4">
         <ReCAPTCHA 
-          sitekey="6LczTOYqAAAAADUaULeZhm-Puyo0BWuUU2pQmsSm"
+          sitekey={process.env.NEXT_PUBLIC_SITE_KEY}
           onChange={val => setCapVal(val)}
         />
         <input 
-          disabled={!capVal || status === "Sending..."} 
+          disabled={!capVal || status === "Skickar..."} 
           type="submit" 
           value={status} 
-          className={`bg-blue-500 text-white font-bold py-2 px-4 rounded-lg cursor-pointer transition-all ${!capVal || status === "Sending..." ? "opacity-50 cursor-not-allowed" : "hover:bg-blue-700"}`} 
+          className={`border-1 text-black font-bold text-2xl w-[20vw] h-[55px] cursor-pointer bg-darkblue rounded-full ${!capVal || status === "Skickar..." ? "opacity-50 cursor-not-allowed" : "hover:bg-[#4D99C4]"}`} 
         />
       </div>
     </form>
