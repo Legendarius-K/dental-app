@@ -123,7 +123,7 @@ const Navbar = () => {
           className={`OVERLAY fixed top-0 left-0 bg-black opacity-40 w-full h-screen ${dropdownOpen || isOpen ? "" : "hidden"}`}
         ></div>
         <Link href={"/"}>
-          <h1
+          <h2
             className={`relative pl-10 md:pl-0 z-20 text-lg md:text-xl font-semibold  ${dropdownOpen ? "text-textmain" : ""}`}
           >
             {!dropdownOpen && (
@@ -136,7 +136,7 @@ const Navbar = () => {
             {dropdownOpen && (
               <Image className="w-[240px]" src={logoBlack} alt="logo" />
             )}
-          </h1>
+          </h2>
         </Link>
         <div className="gap-5 lg:gap-10 hidden md:flex">
           <div

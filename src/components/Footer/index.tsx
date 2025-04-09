@@ -28,7 +28,7 @@ const Footer = () => {
               <p className="p1">Contact:</p>
               <a href={`tel:${contact.phone}`}>{contact.phone}</a>
               <a href={`mailto:${contact.email}`}>{contact.email}</a>
-              <div className="flex space-x-2 mt-2">
+              {/* <div className="flex space-x-2 mt-2">
                 <Link
                   href="https://instagram.com"
                   target="_blank"
@@ -51,11 +51,10 @@ const Footer = () => {
                     className="w-[22px]"
                   />
                 </Link>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="text-sm mt-8 md:mt-0">
-            {/* <p className=" p1 pb-4">Länkar</p> */}
             <ul className="flex flex-col md:flex-row align-baseline space-y-4 md:space-y-0 md:py-4">
               <li>
                 <Link
