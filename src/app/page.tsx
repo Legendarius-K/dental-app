@@ -16,7 +16,7 @@ export default function Home() {
       <Hero />
       <HowHelp />
       <div className="flex flex-col items-center bg-white">
-        <section className="w-full max-w-[1200px] flex flex-col md:flex-row justify-center gap-16 my-10 md:p-16">
+        <section className="w-full max-w-[1200px] flex flex-col md:flex-row justify-center gap-16 my-10 p-4 md:p-16">
           <div className="md:w-1/2  w-full flex flex-col gap-5 font-sans">
             <h3 className="text-2xl md:text-3xl font-nunito font-semibold text-center md:text-left text-bluegray">
               Pålitlig tandläkare med trygg vård i Tranås
