@@ -68,7 +68,7 @@ export default function Home() {
             </div>
           </div>
           <div className="md:w-1/2 w-full">
-            <Image className="w-full h-auto rounded" src={dentist} alt="ache" />
+            <Image className="w-full h-auto rounded" src={dentist} alt="tandläkare" />
           </div>
         </section>
       </div>

@@ -101,7 +101,7 @@ const HomeInfo = () => {
               </li>
               <li>
                 <span className="font-bold text-darkblue pr-1">•</span>{" "}
-                <span className="font-bold">Resultat och plan</span> – fteråt
+                <span className="font-bold">Resultat och plan</span> – efteråt
                 går vi igenom dina tänders status, föreslår eventuella åtgärder
                 och informerar om behandlingsalternativ och kostnader.
               </li>
