@@ -35,7 +35,7 @@ const PriceMap = () => {
         </div>
       </div>
 
-      <div className="w-full md:w-1/2 md:border-l shadow-md rounded-xl bg-white pb-20 md:pb-0">
+      <div className="w-full md:w-1/2 md:border-l shadow-md rounded-xl bg-white pb-20 md:pb-0 md:mr-3 max-w-[600px]">
         <h2 className="text-3xl pl-6 text-textwhite py-2 font-nunito rounded-tl-xl rounded-tr-xl bg-bluegray">
           Hitta en ledig tid
         </h2>

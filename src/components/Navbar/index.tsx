@@ -116,7 +116,7 @@ const Navbar = () => {
 
     return (
       <nav
-        className={` fixed top-0 left-0 z-40 w-full py-4 flex justify-between items-center transition-all px-4 h-[56px] bg-black bg-opacity-70 ${dropdownOpen ? "text-textmain" : "text-textwhite"}`}
+        className={` fixed top-0 left-0 z-40 w-full py-4 flex justify-between items-center transition-all px-4 h-[56px] bg-black bg-opacity-85 ${dropdownOpen ? "text-textmain" : "text-textwhite"}`}
       >
         <div
           onClick={closeMenu}

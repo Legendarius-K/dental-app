@@ -24,7 +24,7 @@ const GetInTouch = () => {
         <button
           onClick={() => changeCity("tranås")}
           className={cn(
-            "px-4 py-1 border-l-2 border-r-2 border-t-2 border-bluegray rounded-t-lg flex gap-2 items-center",
+            "px-4 py-1 border-l-2 border-r-2 border-t-2 border-bluegray rounded-t-sm flex gap-2 items-center",
             city === "tranås" && "font-bold  bg-bluegray text-neutral-100"
           )}
         >
@@ -38,7 +38,7 @@ const GetInTouch = () => {
         <button
           onClick={() => changeCity("norrköping")}
           className={cn(
-            "px-4  border-r-2 border-t-2 border-bluegray rounded-t-lg flex gap-2 items-center",
+            "px-4  border-r-2 border-t-2 border-bluegray rounded-t-sm flex gap-2 items-center",
             city === "norrköping" && "font-bold  bg-bluegray text-neutral-100"
           )}
         >
@@ -50,7 +50,7 @@ const GetInTouch = () => {
           Norrköping
         </button>
       </div>
-      <div className="w-full max-w-[1400px] bg-bluegray pt-10 rounded-2xl shadow-2xl">
+      <div className="w-full max-w-[1400px] bg-bluegray pt-10 rounded-md shadow-2xl">
         <div className="flex flex-col sm:flex-row px-4 pb-24  sm:p-10 sm:pb-28 mt-0">
           {city === "tranås" && (
             <div className="flex flex-col justify-between w-full p-0 h-[450px]">
